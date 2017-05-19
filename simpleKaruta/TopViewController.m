@@ -1,18 +1,19 @@
 //
-//  ViewController.m
+//  TopViewController.m
 //  simpleKaruta
-//
+//  トップ画面
+
 //  Created by ahausagi on 2017/05/19.
 //  Copyright © 2017年 ahausagi. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TopViewController.h"
 
-@interface ViewController ()
+@interface TopViewController ()
 
 @end
 
-@implementation ViewController
+@implementation TopViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
