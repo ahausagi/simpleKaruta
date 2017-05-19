@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF3216C21ECED57C0035C430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C11ECED57C0035C430 /* main.m */; };
+		BF3216C51ECED57C0035C430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C41ECED57C0035C430 /* AppDelegate.m */; };
+		BF3216C81ECED57C0035C430 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C71ECED57C0035C430 /* ViewController.m */; };
+		BF3216CB1ECED57C0035C430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3216C91ECED57C0035C430 /* Main.storyboard */; };
+		BF3216CD1ECED57C0035C430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3216CC1ECED57C0035C430 /* Assets.xcassets */; };
+		BF3216D01ECED57C0035C430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3216CE1ECED57C0035C430 /* LaunchScreen.storyboard */; };
+		BF3216DB1ECED57C0035C430 /* simpleKarutaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216DA1ECED57C0035C430 /* simpleKarutaTests.m */; };
+		BF3216E61ECED57C0035C430 /* simpleKarutaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216E51ECED57C0035C430 /* simpleKarutaUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF3216D71ECED57C0035C430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF3216B51ECED57C0035C430 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF3216BC1ECED57C0035C430;
+			remoteInfo = simpleKaruta;
+		};
+		BF3216E21ECED57C0035C430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF3216B51ECED57C0035C430 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF3216BC1ECED57C0035C430;
+			remoteInfo = simpleKaruta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF3216BD1ECED57C0035C430 /* simpleKaruta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleKaruta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3216C11ECED57C0035C430 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BF3216C31ECED57C0035C430 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		BF3216C41ECED57C0035C430 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BF3216C61ECED57C0035C430 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		BF3216C71ECED57C0035C430 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BF3216CA1ECED57C0035C430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF3216CC1ECED57C0035C430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF3216CF1ECED57C0035C430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF3216D11ECED57C0035C430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF3216D61ECED57C0035C430 /* simpleKarutaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleKarutaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3216DA1ECED57C0035C430 /* simpleKarutaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = simpleKarutaTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BF3216DC1ECED57C0035C430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF3216E11ECED57C0035C430 /* simpleKarutaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleKarutaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3216E51ECED57C0035C430 /* simpleKarutaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = simpleKarutaUITests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BF3216E71ECED57C0035C430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF3216BA1ECED57C0035C430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3216D31ECED57C0035C430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3216DE1ECED57C0035C430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF3216B41ECED57C0035C430 = {
+			isa = PBXGroup;
+			children = (
+				BF3216BF1ECED57C0035C430 /* simpleKaruta */,
+				BF3216D91ECED57C0035C430 /* simpleKarutaTests */,
+				BF3216E41ECED57C0035C430 /* simpleKarutaUITests */,
+				BF3216BE1ECED57C0035C430 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF3216BE1ECED57C0035C430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF3216BD1ECED57C0035C430 /* simpleKaruta.app */,
+				BF3216D61ECED57C0035C430 /* simpleKarutaTests.xctest */,
+				BF3216E11ECED57C0035C430 /* simpleKarutaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF3216BF1ECED57C0035C430 /* simpleKaruta */ = {
+			isa = PBXGroup;
+			children = (
+				BF3216C31ECED57C0035C430 /* AppDelegate.h */,
+				BF3216C41ECED57C0035C430 /* AppDelegate.m */,
+				BF3216C61ECED57C0035C430 /* ViewController.h */,
+				BF3216C71ECED57C0035C430 /* ViewController.m */,
+				BF3216C91ECED57C0035C430 /* Main.storyboard */,
+				BF3216CC1ECED57C0035C430 /* Assets.xcassets */,
+				BF3216CE1ECED57C0035C430 /* LaunchScreen.storyboard */,
+				BF3216D11ECED57C0035C430 /* Info.plist */,
+				BF3216C01ECED57C0035C430 /* Supporting Files */,
+			);
+			path = simpleKaruta;
+			sourceTree = "<group>";
+		};
+		BF3216C01ECED57C0035C430 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF3216C11ECED57C0035C430 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF3216D91ECED57C0035C430 /* simpleKarutaTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF3216DA1ECED57C0035C430 /* simpleKarutaTests.m */,
+				BF3216DC1ECED57C0035C430 /* Info.plist */,
+			);
+			path = simpleKarutaTests;
+			sourceTree = "<group>";
+		};
+		BF3216E41ECED57C0035C430 /* simpleKarutaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF3216E51ECED57C0035C430 /* simpleKarutaUITests.m */,
+				BF3216E71ECED57C0035C430 /* Info.plist */,
+			);
+			path = simpleKarutaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF3216BC1ECED57C0035C430 /* simpleKaruta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF3216EA1ECED57C0035C430 /* Build configuration list for PBXNativeTarget "simpleKaruta" */;
+			buildPhases = (
+				BF3216B91ECED57C0035C430 /* Sources */,
+				BF3216BA1ECED57C0035C430 /* Frameworks */,
+				BF3216BB1ECED57C0035C430 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = simpleKaruta;
+			productName = simpleKaruta;
+			productReference = BF3216BD1ECED57C0035C430 /* simpleKaruta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF3216D51ECED57C0035C430 /* simpleKarutaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF3216ED1ECED57C0035C430 /* Build configuration list for PBXNativeTarget "simpleKarutaTests" */;
+			buildPhases = (
+				BF3216D21ECED57C0035C430 /* Sources */,
+				BF3216D31ECED57C0035C430 /* Frameworks */,
+				BF3216D41ECED57C0035C430 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF3216D81ECED57C0035C430 /* PBXTargetDependency */,
+			);
+			name = simpleKarutaTests;
+			productName = simpleKarutaTests;
+			productReference = BF3216D61ECED57C0035C430 /* simpleKarutaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF3216E01ECED57C0035C430 /* simpleKarutaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF3216F01ECED57C0035C430 /* Build configuration list for PBXNativeTarget "simpleKarutaUITests" */;
+			buildPhases = (
+				BF3216DD1ECED57C0035C430 /* Sources */,
+				BF3216DE1ECED57C0035C430 /* Frameworks */,
+				BF3216DF1ECED57C0035C430 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF3216E31ECED57C0035C430 /* PBXTargetDependency */,
+			);
+			name = simpleKarutaUITests;
+			productName = simpleKarutaUITests;
+			productReference = BF3216E11ECED57C0035C430 /* simpleKarutaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF3216B51ECED57C0035C430 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = ahausagi;
+				TargetAttributes = {
+					BF3216BC1ECED57C0035C430 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					BF3216D51ECED57C0035C430 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BF3216BC1ECED57C0035C430;
+					};
+					BF3216E01ECED57C0035C430 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BF3216BC1ECED57C0035C430;
+					};
+				};
+			};
+			buildConfigurationList = BF3216B81ECED57C0035C430 /* Build configuration list for PBXProject "simpleKaruta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF3216B41ECED57C0035C430;
+			productRefGroup = BF3216BE1ECED57C0035C430 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF3216BC1ECED57C0035C430 /* simpleKaruta */,
+				BF3216D51ECED57C0035C430 /* simpleKarutaTests */,
+				BF3216E01ECED57C0035C430 /* simpleKarutaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF3216BB1ECED57C0035C430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3216D01ECED57C0035C430 /* LaunchScreen.storyboard in Resources */,
+				BF3216CD1ECED57C0035C430 /* Assets.xcassets in Resources */,
+				BF3216CB1ECED57C0035C430 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3216D41ECED57C0035C430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3216DF1ECED57C0035C430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF3216B91ECED57C0035C430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3216C81ECED57C0035C430 /* ViewController.m in Sources */,
+				BF3216C51ECED57C0035C430 /* AppDelegate.m in Sources */,
+				BF3216C21ECED57C0035C430 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3216D21ECED57C0035C430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3216DB1ECED57C0035C430 /* simpleKarutaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3216DD1ECED57C0035C430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3216E61ECED57C0035C430 /* simpleKarutaUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF3216D81ECED57C0035C430 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF3216BC1ECED57C0035C430 /* simpleKaruta */;
+			targetProxy = BF3216D71ECED57C0035C430 /* PBXContainerItemProxy */;
+		};
+		BF3216E31ECED57C0035C430 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF3216BC1ECED57C0035C430 /* simpleKaruta */;
+			targetProxy = BF3216E21ECED57C0035C430 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF3216C91ECED57C0035C430 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF3216CA1ECED57C0035C430 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF3216CE1ECED57C0035C430 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF3216CF1ECED57C0035C430 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF3216E81ECED57C0035C430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF3216E91ECED57C0035C430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF3216EB1ECED57C0035C430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = simpleKaruta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.ahausagi1722.simpleKaruta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF3216EC1ECED57C0035C430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = simpleKaruta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.ahausagi1722.simpleKaruta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BF3216EE1ECED57C0035C430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = simpleKarutaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.ahausagi1722.simpleKarutaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/simpleKaruta.app/simpleKaruta";
+			};
+			name = Debug;
+		};
+		BF3216EF1ECED57C0035C430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = simpleKarutaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.ahausagi1722.simpleKarutaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/simpleKaruta.app/simpleKaruta";
+			};
+			name = Release;
+		};
+		BF3216F11ECED57C0035C430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = simpleKarutaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.ahausagi1722.simpleKarutaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = simpleKaruta;
+			};
+			name = Debug;
+		};
+		BF3216F21ECED57C0035C430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = simpleKarutaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.ahausagi1722.simpleKarutaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = simpleKaruta;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF3216B81ECED57C0035C430 /* Build configuration list for PBXProject "simpleKaruta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF3216E81ECED57C0035C430 /* Debug */,
+				BF3216E91ECED57C0035C430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF3216EA1ECED57C0035C430 /* Build configuration list for PBXNativeTarget "simpleKaruta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF3216EB1ECED57C0035C430 /* Debug */,
+				BF3216EC1ECED57C0035C430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BF3216ED1ECED57C0035C430 /* Build configuration list for PBXNativeTarget "simpleKarutaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF3216EE1ECED57C0035C430 /* Debug */,
+				BF3216EF1ECED57C0035C430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BF3216F01ECED57C0035C430 /* Build configuration list for PBXNativeTarget "simpleKarutaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF3216F11ECED57C0035C430 /* Debug */,
+				BF3216F21ECED57C0035C430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF3216B51ECED57C0035C430 /* Project object */;
+}
