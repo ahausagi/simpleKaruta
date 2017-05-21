@@ -3,7 +3,7 @@
 //  simpleKaruta
 //  歌データを持つクラス
 
-//  Created by cmlab on 2017/05/19.
+//  Created by ahausagi on 2017/05/19.
 //  Copyright © 2017年 ahausagi. All rights reserved.
 //
 
@@ -11,9 +11,9 @@
 
 @interface Tanka : NSObject
 
-// 上の句
-
-
-// 下の句
+@property (nonatomic) NSMutableArray *allTankaArray;
+@property (nonatomic) NSMutableArray *firstPartsArray;  // 上の句
+@property (nonatomic) NSMutableArray *lastPartsArray;   // 下の句
+- (BOOL) prepareAllTanka;
 
 @end

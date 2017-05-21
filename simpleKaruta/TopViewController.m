@@ -8,6 +8,7 @@
 //
 
 #import "TopViewController.h"
+#import "Tanka.h"
 
 @interface TopViewController ()
 
@@ -17,7 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    // Tankaクラスのテスト
+    Tanka *tanka = [[Tanka alloc] init];
+    [tanka prepareAllTanka];
+    
 }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A7D877C1ED0489E00343689 /* allTankaData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D877B1ED0489E00343689 /* allTankaData.json */; };
 		BF3216C21ECED57C0035C430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C11ECED57C0035C430 /* main.m */; };
 		BF3216C51ECED57C0035C430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C41ECED57C0035C430 /* AppDelegate.m */; };
 		BF3216C81ECED57C0035C430 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C71ECED57C0035C430 /* TopViewController.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A7D877B1ED0489E00343689 /* allTankaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allTankaData.json; sourceTree = "<group>"; };
 		BF3216BD1ECED57C0035C430 /* simpleKaruta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleKaruta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3216C11ECED57C0035C430 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BF3216C31ECED57C0035C430 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -90,6 +92,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A7D877A1ED044E600343689 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BF3216F81ECEDBA90035C430 /* Tanka.h */,
+				BF3216F61ECEDB940035C430 /* Tanka.m */,
+				BF3216F91ECEDD4D0035C430 /* Torifuda.h */,
+				BF3216FA1ECEDD880035C430 /* Torifuda.m */,
+				BF3216FE1ECEDE6B0035C430 /* Questions.h */,
+				BF3216FC1ECEDE5A0035C430 /* Questions.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		BF3216B41ECED57C0035C430 = {
 			isa = PBXGroup;
 			children = (
@@ -113,22 +128,18 @@
 		BF3216BF1ECED57C0035C430 /* simpleKaruta */ = {
 			isa = PBXGroup;
 			children = (
+				0A7D877A1ED044E600343689 /* model */,
 				BF3216C31ECED57C0035C430 /* AppDelegate.h */,
 				BF3216C41ECED57C0035C430 /* AppDelegate.m */,
 				BF3216C61ECED57C0035C430 /* TopViewController.h */,
 				BF3216C71ECED57C0035C430 /* TopViewController.m */,
 				BF3216F31ECEDA710035C430 /* PlayingViewController.h */,
 				BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */,
-				BF3216F81ECEDBA90035C430 /* Tanka.h */,
-				BF3216F61ECEDB940035C430 /* Tanka.m */,
-				BF3216F91ECEDD4D0035C430 /* Torifuda.h */,
-				BF3216FA1ECEDD880035C430 /* Torifuda.m */,
-				BF3216FE1ECEDE6B0035C430 /* Questions.h */,
-				BF3216FC1ECEDE5A0035C430 /* Questions.m */,
 				BF3216C91ECED57C0035C430 /* Main.storyboard */,
 				BF3216CC1ECED57C0035C430 /* Assets.xcassets */,
 				BF3216CE1ECED57C0035C430 /* LaunchScreen.storyboard */,
 				BF3216D11ECED57C0035C430 /* Info.plist */,
+				0A7D877B1ED0489E00343689 /* allTankaData.json */,
 				BF3216C01ECED57C0035C430 /* Supporting Files */,
 			);
 			path = simpleKaruta;
@@ -269,6 +280,7 @@
 				BF3216D01ECED57C0035C430 /* LaunchScreen.storyboard in Resources */,
 				BF3216CD1ECED57C0035C430 /* Assets.xcassets in Resources */,
 				BF3216CB1ECED57C0035C430 /* Main.storyboard in Resources */,
+				0A7D877C1ED0489E00343689 /* allTankaData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
