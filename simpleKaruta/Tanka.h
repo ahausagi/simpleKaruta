@@ -11,9 +11,8 @@
 
 @interface Tanka : NSObject
 
-@property (nonatomic) NSMutableArray *allTankaArray;
-@property (nonatomic) NSMutableArray *firstPartsArray;  // 上の句
-@property (nonatomic) NSMutableArray *lastPartsArray;   // 下の句
+@property (nonatomic) NSMutableArray *firstPartsArray;  // 上の句のみの配列
+@property (nonatomic) NSMutableArray *lastPartsArray;   // 下の句のみの配列
 - (BOOL) prepareAllTanka;
 
 @end
