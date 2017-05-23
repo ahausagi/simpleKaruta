@@ -10,9 +10,6 @@
 #import "Tanka.h"
 
 @interface Tanka ()
-
-@property (nonatomic) NSMutableArray *allTankaArray;    // 全首格納した配列
-
 @end
 
 
@@ -25,7 +22,8 @@
 - (BOOL) prepareAllTanka
 {
     BOOL result = NO;
-    self.allTankaArray = [NSMutableArray array];
+    self.firstPartsArray = [NSMutableArray array];
+    self.lastPartsArray = [NSMutableArray array];
     
     // JSON データの読み込み
     
@@ -44,6 +42,8 @@
         
         if (!error2 && [jsonArray count] > 0) {
             
+            int count = 0;  // 歌番号になる
+            
             // 一首ずつ取り出す
             for (NSDictionary *dic in jsonArray) {
                 
@@ -53,12 +53,29 @@
                     [oneTankaArr addObject:str];
                 }
                 
-                [self.allTankaArray addObject:oneTankaArr];
-                
+                // 歌番号をつけて上の句配列/下の句配列を作成
+                // 上の句
+                NSMutableArray *firstPart = [NSMutableArray array];
+                [firstPart addObject:oneTankaArr[0]];
+                [firstPart addObject:oneTankaArr[1]];
+                [firstPart addObject:oneTankaArr[2]];
+                NSMutableDictionary *firstPartDict = [NSMutableDictionary dictionary];
+                [firstPartDict setObject:@(count) forKey:@"no"];
+                [firstPartDict setObject:firstPart forKey:@"sentence"];
+                [self.firstPartsArray addObject:firstPartDict];
+
+                // 下の句
+                NSMutableArray *lastPart = [NSMutableArray array];
+                [lastPart addObject:oneTankaArr[3]];
+                [lastPart addObject:oneTankaArr[4]];
+                NSMutableDictionary *lastPartDict = [NSMutableDictionary dictionary];
+                [lastPartDict setObject:@(count) forKey:@"no"];
+                [lastPartDict setObject:lastPart forKey:@"sentence"];
+                [self.lastPartsArray addObject:lastPartDict];
+
+                count++;
             }
             
-            self.firstPartsArray = [self prepareFirstParts];
-            self.lastPartsArray = [self prepareLastParts];
             if ([self.firstPartsArray count] > 0 && [self.lastPartsArray count] > 0) {
                 result = YES;
             } else {
@@ -70,63 +87,6 @@
     return result;
     
 }
-
-/**
- *  上の句のみの配列をつくる
- *  @return 上の句配列を返す
- **/
-- (NSMutableArray *) prepareFirstParts
-{
-    NSMutableArray *returnArray = [NSMutableArray array];
-    
-    // [0][0]あきのたの[0][1]かりほのいほの[0][2]とまをあらみ
-    // [1][0]はるすぎて[1][1]なつきにけらし[1][2]しろたへの
-    // ...
-    
-    // 一首ずつ取り出す
-    for (NSArray *arr in self.allTankaArray) {
-
-        // 上の句（0,1,2番目）のみ取り出す
-        NSMutableArray *firstParts = [NSMutableArray array];
-        [firstParts addObject:arr[0]];
-        [firstParts addObject:arr[1]];
-        [firstParts addObject:arr[2]];
-        
-        [returnArray addObject:firstParts];
-
-    }
-
-    return returnArray;
-}
-
-/**
- *  下の句のみの配列をつくる
- *  @return 下の句配列を返す
- **/
-- (NSMutableArray *) prepareLastParts
-{
-    NSMutableArray *returnArray = [NSMutableArray array];
-    
-    // [0][0]わがころもでは[0][1]つゆにぬれつつ
-    // [1][0]ころもほすてふ[1][1]あまのかぐやま
-    // ...
-    
-    // 一首ずつ取り出す
-    for (NSArray *arr in self.allTankaArray) {
-        
-        // 下の句（3,4番目）のみ取り出す
-        NSMutableArray *lastParts = [NSMutableArray array];
-        [lastParts addObject:arr[3]];
-        [lastParts addObject:arr[4]];
-        
-        [returnArray addObject:lastParts];
-        
-    }
-    
-    return returnArray;
-}
-
-
 
 
 @end
