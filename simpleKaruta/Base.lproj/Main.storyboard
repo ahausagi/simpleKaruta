@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,6 +22,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNi-0K-gqZ" userLabel="ボタンレイアウトガイドビュー">
+                                <rect key="frame" x="16" y="334" width="343" height="333"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdF-Xn-Axx">
+                                        <rect key="frame" x="46.5" y="47" width="250" height="60"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="A50-qo-wdk"/>
+                                            <constraint firstAttribute="height" constant="60" id="MeL-Kx-uhn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <state key="normal" title="はじめから">
+                                            <color key="titleColor" red="0.64313725489999995" green="0.76078431369999999" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKm-2E-PAE">
+                                        <rect key="frame" x="46.5" y="227" width="250" height="60"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="2dB-5o-sL4"/>
+                                            <constraint firstAttribute="width" constant="250" id="Ych-12-jKe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <state key="normal" title="せいせき">
+                                            <color key="titleColor" red="0.64313725489999995" green="0.76078431369999999" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edb-1c-dex">
+                                        <rect key="frame" x="46.5" y="137" width="250" height="60"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Yd0-IU-24f"/>
+                                            <constraint firstAttribute="width" constant="250" id="qBX-Nj-yfE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <state key="normal" title="つづきから">
+                                            <color key="titleColor" red="0.64313725489999995" green="0.76078431369999999" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xKm-2E-PAE" firstAttribute="centerX" secondItem="pNi-0K-gqZ" secondAttribute="centerX" id="7xW-sZ-5q7"/>
+                                    <constraint firstItem="edb-1c-dex" firstAttribute="centerY" secondItem="pNi-0K-gqZ" secondAttribute="centerY" id="fNj-IG-2Pn"/>
+                                    <constraint firstItem="xKm-2E-PAE" firstAttribute="top" secondItem="edb-1c-dex" secondAttribute="bottom" constant="30" id="oNu-eu-ZAy"/>
+                                    <constraint firstItem="DdF-Xn-Axx" firstAttribute="centerX" secondItem="pNi-0K-gqZ" secondAttribute="centerX" id="oaT-cB-odV"/>
+                                    <constraint firstItem="edb-1c-dex" firstAttribute="centerX" secondItem="pNi-0K-gqZ" secondAttribute="centerX" id="q30-UN-AuR"/>
+                                    <constraint firstItem="edb-1c-dex" firstAttribute="top" secondItem="DdF-Xn-Axx" secondAttribute="bottom" constant="30" id="sdr-S0-ZAX"/>
+                                </constraints>
+                            </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="133-2r-XY4" userLabel="縦ガイド線">
                                 <rect key="frame" x="187.5" y="0.0" width="0.0" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,32 +86,8 @@
                                     <constraint firstAttribute="height" constant="1" id="fxS-Gb-aPh"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdF-Xn-Axx">
-                                <rect key="frame" x="66" y="373.5" width="243" height="60"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <state key="normal" title="はじめから">
-                                    <color key="titleColor" red="0.64313725489999995" green="0.76078431369999999" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edb-1c-dex">
-                                <rect key="frame" x="66" y="453.5" width="243" height="60"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <state key="normal" title="つづきから">
-                                    <color key="titleColor" red="0.64313725489999995" green="0.76078431369999999" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKm-2E-PAE">
-                                <rect key="frame" x="66" y="538.5" width="243" height="60"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <state key="normal" title="せいせき">
-                                    <color key="titleColor" red="0.64313725489999995" green="0.76078431369999999" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="百" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utb-se-ugn">
-                                <rect key="frame" x="81" y="80.5" width="101.5" height="121.5"/>
+                                <rect key="frame" x="81.5" y="80.5" width="101" height="121.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -87,7 +113,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbQ-Vv-yfe">
-                                <rect key="frame" x="80.5" y="212" width="102" height="121"/>
+                                <rect key="frame" x="81.5" y="212" width="101" height="121"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -116,13 +142,12 @@
                         <color key="backgroundColor" red="0.64313725490196072" green="0.76078431372549016" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rOn-Db-F6u" firstAttribute="leading" secondItem="133-2r-XY4" secondAttribute="trailing" constant="5" id="43f-73-sNz"/>
-                            <constraint firstItem="DdF-Xn-Axx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="4cA-lb-UbY"/>
                             <constraint firstItem="133-2r-XY4" firstAttribute="leading" secondItem="Utb-se-ugn" secondAttribute="trailing" constant="5" id="6sJ-xy-IuB"/>
                             <constraint firstItem="EbQ-Vv-yfe" firstAttribute="top" secondItem="Utb-se-ugn" secondAttribute="bottom" constant="10" id="7ay-3f-Mrx"/>
                             <constraint firstItem="133-2r-XY4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BZD-SE-m5Q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="edb-1c-dex" secondAttribute="trailing" constant="50" id="Euc-va-ej3"/>
                             <constraint firstItem="EbQ-Vv-yfe" firstAttribute="height" secondItem="Utb-se-ugn" secondAttribute="height" id="Fw8-1r-4bZ"/>
                             <constraint firstItem="KIi-Mm-bTg" firstAttribute="leading" secondItem="EbQ-Vv-yfe" secondAttribute="trailing" constant="10" id="IFg-kB-Kpg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pNi-0K-gqZ" secondAttribute="trailing" id="IKI-Hq-ZFs"/>
                             <constraint firstAttribute="bottomMargin" secondItem="133-2r-XY4" secondAttribute="bottom" id="J6P-An-R4A"/>
                             <constraint firstItem="Utb-se-ugn" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" priority="750" constant="65.5" id="KQ9-nA-v3C"/>
                             <constraint firstItem="KIi-Mm-bTg" firstAttribute="top" secondItem="rOn-Db-F6u" secondAttribute="bottom" constant="10" id="Ovr-V2-ugO"/>
@@ -131,26 +156,22 @@
                             <constraint firstItem="wxn-a2-uhm" firstAttribute="top" secondItem="EbQ-Vv-yfe" secondAttribute="bottom" id="SJT-Ks-kvG"/>
                             <constraint firstItem="wxn-a2-uhm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TSc-9k-stN"/>
                             <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="rOn-Db-F6u" secondAttribute="trailing" priority="750" constant="65.5" id="TWm-iq-8PA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xKm-2E-PAE" secondAttribute="trailing" constant="50" id="Wka-jl-vnr"/>
+                            <constraint firstItem="pNi-0K-gqZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XYg-JA-xAl"/>
                             <constraint firstAttribute="trailing" secondItem="wxn-a2-uhm" secondAttribute="trailing" id="Xcy-Vj-3Ke"/>
-                            <constraint firstItem="DdF-Xn-Axx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="70" id="a7i-X7-Y49"/>
                             <constraint firstItem="wxn-a2-uhm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aeQ-tt-qel"/>
                             <constraint firstItem="rOn-Db-F6u" firstAttribute="leading" secondItem="Utb-se-ugn" secondAttribute="trailing" constant="10" id="axF-L8-ZDp"/>
                             <constraint firstItem="KIi-Mm-bTg" firstAttribute="leading" secondItem="133-2r-XY4" secondAttribute="trailing" constant="5" id="b0y-yK-CIH"/>
                             <constraint firstItem="EbQ-Vv-yfe" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" priority="750" constant="65.5" id="bYN-Li-Q0A"/>
-                            <constraint firstItem="edb-1c-dex" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="dKd-C2-AkF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DdF-Xn-Axx" secondAttribute="trailing" constant="50" id="dWa-Zj-B4s"/>
                             <constraint firstItem="133-2r-XY4" firstAttribute="leading" secondItem="EbQ-Vv-yfe" secondAttribute="trailing" constant="5" id="eAx-nr-tXL"/>
                             <constraint firstItem="rOn-Db-F6u" firstAttribute="leading" secondItem="Utb-se-ugn" secondAttribute="trailing" constant="10" id="ehs-Qv-vN8"/>
                             <constraint firstItem="Utb-se-ugn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="750" constant="50" id="mJP-Ol-AFe"/>
                             <constraint firstItem="133-2r-XY4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="p8l-Bp-Bpg"/>
-                            <constraint firstItem="xKm-2E-PAE" firstAttribute="top" secondItem="edb-1c-dex" secondAttribute="bottom" constant="25" id="r2P-wr-ygD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pNi-0K-gqZ" secondAttribute="bottom" id="rdp-aC-jxt"/>
                             <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="KIi-Mm-bTg" secondAttribute="trailing" priority="750" constant="65.5" id="sOC-pa-tnR"/>
                             <constraint firstItem="133-2r-XY4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tji-cY-zzK"/>
                             <constraint firstItem="wxn-a2-uhm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="umz-wn-wac"/>
-                            <constraint firstItem="xKm-2E-PAE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="y2s-Mr-I4b"/>
+                            <constraint firstItem="pNi-0K-gqZ" firstAttribute="top" secondItem="wxn-a2-uhm" secondAttribute="bottom" id="xuC-3o-Trg"/>
                             <constraint firstItem="rOn-Db-F6u" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="750" constant="50" id="z2g-Zp-2wd"/>
-                            <constraint firstItem="edb-1c-dex" firstAttribute="top" secondItem="DdF-Xn-Axx" secondAttribute="bottom" constant="20" id="zJ9-SZ-UHW"/>
                         </constraints>
                     </view>
                 </viewController>
