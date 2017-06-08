@@ -7,9 +7,13 @@
 //  Copyright © 2017年 ahausagi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface Torifuda : NSObject
 
+@property (nonatomic) NSMutableArray *answerArray;    // 下の句を出題順に格納する
+
+
+- (void) makeAnswerArrayWithQuestions:(NSArray *) questionArray;
 
 @end

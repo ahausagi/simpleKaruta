@@ -8,7 +8,8 @@
 //
 
 #import "TopViewController.h"
-#import "Tanka.h"
+#import "Questions.h"
+#import "Torifuda.h"
 
 @interface TopViewController ()
 
@@ -19,10 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Tankaクラスのテスト
-    Tanka *tanka = [[Tanka alloc] init];
-    [tanka prepareAllTanka];
+    // TODO:デバッグ用　あとで消す
+    // Questionクラスのテスト
+    Questions *questions = [[Questions alloc] init];
+    [questions makeQuestionArrayWithOrder:2];
     
+    if ([questions.questionArray count] > 0) {
+        // Torifudaクラスのテスト
+        Torifuda *torifuda = [[Torifuda alloc] init];
+        [torifuda makeAnswerArrayWithQuestions:questions.questionArray];
+    }
+    
+    
+    
+    
+
 }
 
 
