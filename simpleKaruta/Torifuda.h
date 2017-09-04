@@ -14,6 +14,6 @@
 @property (nonatomic) NSMutableArray *answerArray;    // 下の句を出題順に格納する
 
 
-- (void) makeAnswerArrayWithQuestions:(NSArray *) questionArray;
+- (NSMutableArray *) makeAnswerArrayWithQuestions:(NSArray *) questionArray;
 
 @end
