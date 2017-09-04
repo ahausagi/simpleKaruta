@@ -26,21 +26,21 @@
 - (void) makeQuestionArrayWithOrder:(NSInteger) order {
     
     self.questionArray = [NSMutableArray array];
-    
-    Tanka *tanka = [[Tanka alloc] init];
-    BOOL isPrepared = [tanka prepareAllTanka];
+
+    // 歌情報がちゃんと用意できてるか
+    BOOL isPrepared = [Tanka sharedManager].isPreparedSuccess;
 
     if (isPrepared) {
-        
-        NSInteger tankaCount = [tanka.firstPartsArray count];   // 歌合計数
+        NSLog(@"prepare success!");
+        NSInteger tankaCount = [[Tanka sharedManager].firstPartsArray count];   // 歌合計数
 
         if (order == 0) {   // 前から
-            self.questionArray = [tanka.firstPartsArray mutableCopy];
+            self.questionArray = [[Tanka sharedManager].firstPartsArray mutableCopy];
             
         } else if (order == 1) {    // 後ろから
             // 後ろから１つずつ歌を取り出し格納
-            for (int i = (int)([tanka.firstPartsArray count]-1); i >= 0; i--) {
-                NSArray *arr = [tanka.firstPartsArray[i] mutableCopy];
+            for (int i = (int)([[Tanka sharedManager].firstPartsArray count]-1); i >= 0; i--) {
+                NSArray *arr = [[Tanka sharedManager].firstPartsArray[i] mutableCopy];
                 [self.questionArray addObject:arr];
             }
             
@@ -67,7 +67,7 @@
                 if (existsInArr == NO) {    // 初出
                     // 重複しなければ、その歌番号の上の句を出題配列に入れる
                     
-                    for (NSDictionary *dict in tanka.firstPartsArray) {
+                    for (NSDictionary *dict in [Tanka sharedManager].firstPartsArray) {
                         if ([dict[@"no"] intValue] == randomNum) {
                             // 出題配列に入れる
                             [self.questionArray addObject:[dict mutableCopy]];
@@ -82,7 +82,7 @@
             }
             
         } else {    // 引数間違い。デフォルトとして前からにする
-            self.questionArray = [tanka.firstPartsArray mutableCopy];
+            self.questionArray = [[Tanka sharedManager].firstPartsArray mutableCopy];
             
         }
         

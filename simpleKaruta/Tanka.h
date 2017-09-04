@@ -11,8 +11,10 @@
 
 @interface Tanka : NSObject
 
+@property (nonatomic) BOOL isPreparedSuccess;   // 歌データの生成が成功したらYES
 @property (nonatomic) NSMutableArray *firstPartsArray;  // 上の句のみの配列
 @property (nonatomic) NSMutableArray *lastPartsArray;   // 下の句のみの配列
-- (BOOL) prepareAllTanka;
+
++ (Tanka *)sharedManager;
 
 @end

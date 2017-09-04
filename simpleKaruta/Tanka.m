@@ -15,13 +15,32 @@
 
 @implementation Tanka
 
+static Tanka *sharedData_ = nil;
+
++ (Tanka *)sharedManager{
+    if (!sharedData_) {
+        sharedData_ = [Tanka new];
+    }
+    return sharedData_;
+}
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        //Initialization
+        [self prepareAllTanka];
+    }
+    return self;
+}
+
+
 /**
  *  歌情報をJSON から取得し配列に格納する
- *  @return 歌情報取得に成功したかどうか。失敗していたらゲーム実行できないのでエラーを出してください
  **/
-- (BOOL) prepareAllTanka
+- (void) prepareAllTanka
 {
-    BOOL result = NO;
+    self.isPreparedSuccess = NO;
     self.firstPartsArray = [NSMutableArray array];
     self.lastPartsArray = [NSMutableArray array];
     
@@ -77,15 +96,13 @@
             }
             
             if ([self.firstPartsArray count] > 0 && [self.lastPartsArray count] > 0) {
-                result = YES;
+                self.isPreparedSuccess = YES;
             } else {
-                result = NO;
+                self.isPreparedSuccess = NO;
             }
         }
     }
-    
-    return result;
-    
+    self.isPreparedSuccess = YES;
 }
 
 
