@@ -16,6 +16,8 @@
 @property (nonatomic) NSMutableArray *torifudaArray;
 
 // storyboardのアイテム
+@property (weak, nonatomic) IBOutlet UILabel *questionCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *correctCountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *stopButton;
 @property (weak, nonatomic) IBOutlet UILabel *kaminoku1;
 @property (weak, nonatomic) IBOutlet UILabel *kaminoku2;
