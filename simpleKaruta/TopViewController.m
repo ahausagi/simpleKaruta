@@ -8,6 +8,7 @@
 //
 
 #import "TopViewController.h"
+#import "PlayingViewController.h"
 #import "Questions.h"
 #import "Torifuda.h"
 
@@ -20,21 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // TODO:デバッグ用　あとで消す
-    // Questionクラスのテスト
-    Questions *questions = [[Questions alloc] init];
-    [questions makeQuestionArrayWithOrder:2];
-    
-    if ([questions.questionArray count] > 0) {
-        // Torifudaクラスのテスト
-        Torifuda *torifuda = [[Torifuda alloc] init];
-        [torifuda makeAnswerArrayWithQuestions:questions.questionArray];
-    }
-    
-    
-    
-    
-
 }
 
 
@@ -43,5 +29,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+// 遷移前に呼ばれる処理。次の画面に渡す情報を作る
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"startNewGameSegue"]) {  // はじめから
+        
+        // TODO: 最終的には順番選択画面を挟むつもりだが、現時点ではとりあえず固定でランダム出題にしておく
+        
+        PlayingViewController *playingVC = segue.destinationViewController;
+        
+        // 問題文配列を作成して次画面へ渡す
+        NSMutableArray *questionArray = [[[Questions alloc] init] makeQuestionArrayWithOrder:2];
+        playingVC.questionArray = questionArray;
+
+        // 取り札配列を作成して次画面へ渡す
+        NSMutableArray *torifudaArray = [[[Torifuda alloc] init] makeAnswerArrayWithQuestions:questionArray];
+        playingVC.torifudaArray = torifudaArray;
+        
+    } else {
+        // TODO: つづきから　タップ時の処理とか書き足す
+    }
+}
 
 @end

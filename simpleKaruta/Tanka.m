@@ -29,7 +29,6 @@ static Tanka *sharedData_ = nil;
     self = [super init];
     if (self) {
         //Initialization
-        [self prepareAllTanka];
     }
     return self;
 }

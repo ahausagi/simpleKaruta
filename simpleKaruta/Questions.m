@@ -23,9 +23,9 @@
  *  @param order 出題順。0:1番から、1:100番から、2:ランダム
  **/
 
-- (void) makeQuestionArrayWithOrder:(NSInteger) order {
+- (NSMutableArray *) makeQuestionArrayWithOrder:(NSInteger) order {
     
-    self.questionArray = [NSMutableArray array];
+    NSMutableArray *questionArray = [NSMutableArray array];
 
     // 歌情報がちゃんと用意できてるか
     BOOL isPrepared = [Tanka sharedManager].isPreparedSuccess;
@@ -35,20 +35,20 @@
         NSInteger tankaCount = [[Tanka sharedManager].firstPartsArray count];   // 歌合計数
 
         if (order == 0) {   // 前から
-            self.questionArray = [[Tanka sharedManager].firstPartsArray mutableCopy];
+            questionArray = [[Tanka sharedManager].firstPartsArray mutableCopy];
             
         } else if (order == 1) {    // 後ろから
             // 後ろから１つずつ歌を取り出し格納
             for (int i = (int)([[Tanka sharedManager].firstPartsArray count]-1); i >= 0; i--) {
                 NSArray *arr = [[Tanka sharedManager].firstPartsArray[i] mutableCopy];
-                [self.questionArray addObject:arr];
+                [questionArray addObject:arr];
             }
             
         } else if (order == 2) {    // ランダム
 
             NSMutableArray *numArray = [NSMutableArray array];  // 既出数字リスト
             
-            while ([self.questionArray count] < tankaCount) {
+            while ([questionArray count] < tankaCount) {
                 
                 // 0~99の乱数を生成
                 int randomNum = (int)arc4random_uniform((int)tankaCount);
@@ -70,7 +70,7 @@
                     for (NSDictionary *dict in [Tanka sharedManager].firstPartsArray) {
                         if ([dict[@"no"] intValue] == randomNum) {
                             // 出題配列に入れる
-                            [self.questionArray addObject:[dict mutableCopy]];
+                            [questionArray addObject:[dict mutableCopy]];
                             // 既出数字リストに入れる
                             [numArray addObject:@(randomNum)];
                             
@@ -82,18 +82,18 @@
             }
             
         } else {    // 引数間違い。デフォルトとして前からにする
-            self.questionArray = [[Tanka sharedManager].firstPartsArray mutableCopy];
+            questionArray = [[Tanka sharedManager].firstPartsArray mutableCopy];
             
         }
         
-        NSLog(@"questionArray \n %@",[self.questionArray description]);
+        NSLog(@"questionArray \n %@",[questionArray description]);
 
 
     } else {
         NSLog(@"Could'nt prepare tanka");
     }
     
-    
+    return questionArray;
 }
 
 @end

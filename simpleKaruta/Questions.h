@@ -11,7 +11,6 @@
 
 @interface Questions : NSObject
 
-@property (nonatomic) NSMutableArray *questionArray;    // 上の句を出題順に格納する
-- (void) makeQuestionArrayWithOrder:(NSInteger) order;
+- (NSMutableArray *) makeQuestionArrayWithOrder:(NSInteger) order;
 
 @end

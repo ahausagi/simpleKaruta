@@ -16,5 +16,6 @@
 @property (nonatomic) NSMutableArray *lastPartsArray;   // 下の句のみの配列
 
 + (Tanka *)sharedManager;
+- (void) prepareAllTanka;
 
 @end

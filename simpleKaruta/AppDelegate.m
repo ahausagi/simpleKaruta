@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Tanka.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // 歌情報の初期設定
+    [Tanka.sharedManager prepareAllTanka];
+
+    
     return YES;
 }
 
