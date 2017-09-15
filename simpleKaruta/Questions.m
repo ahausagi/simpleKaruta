@@ -58,7 +58,6 @@
                 for (NSNumber *num in numArray) {
                     if (num.intValue == randomNum) {
                         // 既出
-                        NSLog(@"kishutu desu!! randomNum:%d",randomNum);
                         existsInArr = YES;
                         break;
                     }
