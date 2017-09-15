@@ -8,6 +8,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TorifudaView.h"
 
 @interface PlayingViewController : UIViewController
 
@@ -22,6 +23,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *kaminoku1;
 @property (weak, nonatomic) IBOutlet UILabel *kaminoku2;
 @property (weak, nonatomic) IBOutlet UILabel *kaminoku3;
+
+@property (weak, nonatomic) IBOutlet TorifudaView *torifuda1;
+@property (weak, nonatomic) IBOutlet TorifudaView *torifuda2;
+@property (weak, nonatomic) IBOutlet TorifudaView *torifuda3;
+@property (weak, nonatomic) IBOutlet TorifudaView *torifuda4;
 
 @end
 

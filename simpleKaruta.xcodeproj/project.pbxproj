@@ -19,6 +19,8 @@
 		BF3216F71ECEDB940035C430 /* Tanka.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216F61ECEDB940035C430 /* Tanka.m */; };
 		BF3216FB1ECEDD880035C430 /* Torifuda.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216FA1ECEDD880035C430 /* Torifuda.m */; };
 		BF3216FD1ECEDE5A0035C430 /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216FC1ECEDE5A0035C430 /* Questions.m */; };
+		BF72F5731F6A7CD700030F87 /* TorifudaView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72F5721F6A7CD700030F87 /* TorifudaView.m */; };
+		BFD9CCC81F5E9CDE007E9578 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD9CCC71F5E9CDE007E9578 /* TTTAttributedLabel.m */; };
 		BFE5EF441ECEDFB900BFBC28 /* PlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -59,11 +61,15 @@
 		BF3216E71ECED57C0035C430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF3216F31ECEDA710035C430 /* PlayingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingViewController.h; sourceTree = "<group>"; };
 		BF3216F61ECEDB940035C430 /* Tanka.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tanka.m; sourceTree = "<group>"; };
-		BF3216F81ECEDBA90035C430 /* Tanka.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tanka.h; sourceTree = "<group>"; };
-		BF3216F91ECEDD4D0035C430 /* Torifuda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Torifuda.h; sourceTree = "<group>"; };
 		BF3216FA1ECEDD880035C430 /* Torifuda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Torifuda.m; sourceTree = "<group>"; };
 		BF3216FC1ECEDE5A0035C430 /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
 		BF3216FE1ECEDE6B0035C430 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
+		BF72F5721F6A7CD700030F87 /* TorifudaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorifudaView.m; sourceTree = "<group>"; };
+		BF72F5751F6A7D3800030F87 /* TorifudaView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorifudaView.h; sourceTree = "<group>"; };
+		BF72F5771F6A7DBD00030F87 /* Tanka.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tanka.h; sourceTree = "<group>"; };
+		BF72F5781F6A7DD700030F87 /* Torifuda.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Torifuda.h; sourceTree = "<group>"; };
+		BFD9CCC61F5E9CDE007E9578 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		BFD9CCC71F5E9CDE007E9578 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,9 +101,9 @@
 		0A7D877A1ED044E600343689 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				BF3216F81ECEDBA90035C430 /* Tanka.h */,
+				BF72F5771F6A7DBD00030F87 /* Tanka.h */,
 				BF3216F61ECEDB940035C430 /* Tanka.m */,
-				BF3216F91ECEDD4D0035C430 /* Torifuda.h */,
+				BF72F5781F6A7DD700030F87 /* Torifuda.h */,
 				BF3216FA1ECEDD880035C430 /* Torifuda.m */,
 				BF3216FE1ECEDE6B0035C430 /* Questions.h */,
 				BF3216FC1ECEDE5A0035C430 /* Questions.m */,
@@ -135,11 +141,14 @@
 				BF3216C71ECED57C0035C430 /* TopViewController.m */,
 				BF3216F31ECEDA710035C430 /* PlayingViewController.h */,
 				BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */,
+				BF72F5751F6A7D3800030F87 /* TorifudaView.h */,
+				BF72F5721F6A7CD700030F87 /* TorifudaView.m */,
 				BF3216C91ECED57C0035C430 /* Main.storyboard */,
 				BF3216CC1ECED57C0035C430 /* Assets.xcassets */,
 				BF3216CE1ECED57C0035C430 /* LaunchScreen.storyboard */,
 				BF3216D11ECED57C0035C430 /* Info.plist */,
 				0A7D877B1ED0489E00343689 /* allTankaData.json */,
+				BFD9CCC51F5E9CDE007E9578 /* TTTAttributedLabel */,
 				BF3216C01ECED57C0035C430 /* Supporting Files */,
 			);
 			path = simpleKaruta;
@@ -169,6 +178,15 @@
 				BF3216E71ECED57C0035C430 /* Info.plist */,
 			);
 			path = simpleKarutaUITests;
+			sourceTree = "<group>";
+		};
+		BFD9CCC51F5E9CDE007E9578 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				BFD9CCC61F5E9CDE007E9578 /* TTTAttributedLabel.h */,
+				BFD9CCC71F5E9CDE007E9578 /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +326,8 @@
 				BFE5EF441ECEDFB900BFBC28 /* PlayingViewController.m in Sources */,
 				BF3216F71ECEDB940035C430 /* Tanka.m in Sources */,
 				BF3216C81ECED57C0035C430 /* TopViewController.m in Sources */,
+				BF72F5731F6A7CD700030F87 /* TorifudaView.m in Sources */,
+				BFD9CCC81F5E9CDE007E9578 /* TTTAttributedLabel.m in Sources */,
 				BF3216FB1ECEDD880035C430 /* Torifuda.m in Sources */,
 				BF3216C51ECED57C0035C430 /* AppDelegate.m in Sources */,
 				BF3216FD1ECEDE5A0035C430 /* Questions.m in Sources */,
