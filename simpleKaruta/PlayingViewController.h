@@ -8,9 +8,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TorifudaView.h"
+#import "CardView.h"
 
-@interface PlayingViewController : UIViewController
+@interface PlayingViewController : UIViewController <CardViewDelegate>
 
 // 遷移前画面から受け取る情報
 @property (nonatomic) NSMutableArray *questionArray;
@@ -24,10 +24,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *kaminoku2;
 @property (weak, nonatomic) IBOutlet UILabel *kaminoku3;
 
-@property (weak, nonatomic) IBOutlet TorifudaView *torifuda1;
-@property (weak, nonatomic) IBOutlet TorifudaView *torifuda2;
-@property (weak, nonatomic) IBOutlet TorifudaView *torifuda3;
-@property (weak, nonatomic) IBOutlet TorifudaView *torifuda4;
+@property (weak, nonatomic) IBOutlet CardView *card1;
+@property (weak, nonatomic) IBOutlet CardView *card2;
+@property (weak, nonatomic) IBOutlet CardView *card3;
+@property (weak, nonatomic) IBOutlet CardView *card4;
 
 @end
 

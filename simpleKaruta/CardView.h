@@ -1,5 +1,5 @@
 //
-//  TorifudaView.h
+//  CardView.h
 //  simpleKaruta
 //  取り札のビュー
 
@@ -10,10 +10,15 @@
 #import <UIKit/UIKit.h>
 #import "TTTAttributedLabel.h"
 
-@interface TorifudaView : UIView
+@protocol CardViewDelegate <NSObject>
+- (void)tappedCardWithNo:(NSInteger)selectedNo;
+@end
 
+@interface CardView : UIView
+@property(nonatomic, assign) id <CardViewDelegate> delegate;
 @property (nonatomic) NSInteger tankaNo;    // 表示している句の歌番号
 @property (nonatomic) TTTAttributedLabel *text; // 下の句を表示する縦書きラベル
 
+- (void) setGesture;
 @end
 

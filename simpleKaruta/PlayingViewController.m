@@ -14,6 +14,8 @@
 @property (nonatomic) NSInteger totalNumberQuestions; // 総出題数
 @property (nonatomic) NSInteger questionCount; // 何問目か（画面表示するときは+1する）
 @property (nonatomic) NSInteger correctCount; // 正答数
+@property (nonatomic) UIImageView *circleIcon; // ○画像
+@property (nonatomic) UIImageView *wrongIcon; // ×画像
 
 @end
 
@@ -31,6 +33,9 @@
     if ([self.questionArray count] > 0 && [self.torifudaArray count] > 0) {
        
         self.totalNumberQuestions = [self.questionArray count];
+        
+        // 取り札の初期設定
+        [self settingCards];
 
         // 問題数を表示
         [self changeQuestionCountLabelWithCount:self.questionCount];
@@ -43,20 +48,93 @@
         
         // 取り札を表示
         [self changeTorifudaWithCount:self.questionCount];
-
+        
+        // 正解・不正解の画像を作る
+        [self settingImgaes];
+        
     } else {
         NSLog(@"question or torifuda not found");
     }
 }
 
+- (void) settingCards {
+    
+    // デリゲートの設定
+    self.card1.delegate = self;
+    self.card2.delegate = self;
+    self.card3.delegate = self;
+    self.card4.delegate = self;
+    
+    // タップアクションの設定
+    [self.card1 setGesture];
+    [self.card2 setGesture];
+    [self.card3 setGesture];
+    [self.card4 setGesture];
+    
+}
+
+- (void) settingImgaes {
+    
+    // まる
+    UIImageView *circleImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"circleIcon"]];
+    circleImage.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, [UIScreen mainScreen].bounds.size.height/2);
+    [self.view addSubview: circleImage];
+    self.circleIcon = circleImage;
+    self.circleIcon.hidden = YES;
+    
+    // ばつ
+    UIImageView *wrongImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wrongIcon"]];
+    wrongImage.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, [UIScreen mainScreen].bounds.size.height/2);
+    [self.view addSubview: wrongImage];
+    self.wrongIcon = wrongImage;
+    self.wrongIcon.hidden = YES;
+}
 
 #pragma mark - ボタンタップ時処理
-// TODO: 札タップ時に呼ばれるメソッド作る。
-// 正解の札かどうかチェックして、tappedCorrectCard / tappedWrongCard どちらかのメソッドを呼び出す
+// 閉じるボタン
+// TODO:ゆくゆくはpause button にして、一時停止orゲーム終了を選べるようにしたい
+- (IBAction)tappedStopButton:(id)sender {
+    NSLog(@"tapped stop button!");
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
+#pragma mark - CardViewDelegate メソッド
+// 取り札をタップした
+- (void)tappedCardWithNo:(NSInteger)selectedNo {
+    if ([self isCorrectCard:selectedNo]) {
+        [self selectedCorrectCard];
+    } else {
+        [self selectedWrongCard];
+    }
+}
+
+#pragma mark - 正否判定系
+// 選んだ札が正解の札かを判定する
+- (BOOL) isCorrectCard:(NSInteger)selectedNo {
+    
+    // 正解の歌番号
+    NSInteger correctNo = [self.questionArray[self.questionCount][@"no"] integerValue];
+    if (selectedNo == correctNo) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 // 正しい札を選んだとき
-- (void)tappedCorrectCard {
+- (void)selectedCorrectCard {
+    
+    // マルを表示
+    self.circleIcon.alpha = 1.0;
+    self.circleIcon.hidden = NO;
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionLayoutSubviews
+                     animations:^{self.circleIcon.alpha = 0;}
+                     completion:nil];
+
+    
     // 各カウントを更新
     self.questionCount++;
     self.correctCount++;
@@ -71,21 +149,25 @@
 
 
 // 間違った札を選んだとき
-- (void)tappedWrongCard {
-    // TODO: バツとか表示させる？
-    // TODO: 間違った札を消すとかする？
-}
-
-
-// 閉じるボタン
-- (IBAction)tappedStopButton:(id)sender {
-    NSLog(@"tapped stop button!");
+- (void)selectedWrongCard {
     
-    // TODO: デバッグ中　押したら次の問題を表示
-    [self tappedCorrectCard];
+    // バツを表示
+    self.wrongIcon.alpha = 1.0;
+    self.wrongIcon.hidden = NO;
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionLayoutSubviews
+                     animations:^{self.wrongIcon.alpha = 0;}
+                     completion:nil];
     
-    // TODO: 本来はこっちの処理をする
-    //    [self dismissViewControllerAnimated:YES completion:nil];
+    // 各カウントを更新
+    self.questionCount++;
+    [self changeQuestionCountLabelWithCount:self.questionCount];
+    
+    // 問題文と取り札の表示を更新
+    [self changeKaminokuWithCount:self.questionCount];
+    [self changeTorifudaWithCount:self.questionCount];
+
 }
 
 
@@ -114,16 +196,16 @@
 - (void)changeTorifudaWithCount:(NSInteger)count {
     
     // TODO:ここもっと効率的にできないか？？
-    for (UIView *view in [self.torifuda1 subviews]) {
+    for (UIView *view in [self.card1 subviews]) {
         [view removeFromSuperview];
     }
-    for (UIView *view in [self.torifuda2 subviews]) {
+    for (UIView *view in [self.card2 subviews]) {
         [view removeFromSuperview];
     }
-    for (UIView *view in [self.torifuda3 subviews]) {
+    for (UIView *view in [self.card3 subviews]) {
         [view removeFromSuperview];
     }
-    for (UIView *view in [self.torifuda4 subviews]) {
+    for (UIView *view in [self.card4 subviews]) {
         [view removeFromSuperview];
     }
 
@@ -154,37 +236,37 @@
     }
     
     // 取り札ビューに歌番号を持たせる
-    self.torifuda1.tankaNo = [sortedArray[0][@"no"] integerValue];
-    self.torifuda2.tankaNo = [sortedArray[1][@"no"] integerValue];
-    self.torifuda3.tankaNo = [sortedArray[2][@"no"] integerValue];
-    self.torifuda4.tankaNo = [sortedArray[3][@"no"] integerValue];
+    self.card1.tankaNo = [sortedArray[0][@"no"] integerValue];
+    self.card2.tankaNo = [sortedArray[1][@"no"] integerValue];
+    self.card3.tankaNo = [sortedArray[2][@"no"] integerValue];
+    self.card4.tankaNo = [sortedArray[3][@"no"] integerValue];
     
     
     // 並べ替えた下の句をひとつずつ縦書き変換する
-    NSString *torifuda1Str = sortedArray[0][@"sentence"][0];
-    torifuda1Str = [torifuda1Str stringByAppendingString:sortedArray[0][@"sentence"][1]];
-    torifuda1Str = [self separateFiveCharactersSentence:torifuda1Str];
-    NSString *torifuda2Str = sortedArray[1][@"sentence"][0];
-    torifuda2Str = [torifuda2Str stringByAppendingString:sortedArray[1][@"sentence"][1]];
-    torifuda2Str = [self separateFiveCharactersSentence:torifuda2Str];
-    NSString *torifuda3Str = sortedArray[2][@"sentence"][0];
-    torifuda3Str = [torifuda3Str stringByAppendingString:sortedArray[2][@"sentence"][1]];
-    torifuda3Str = [self separateFiveCharactersSentence:torifuda3Str];
-    NSString *torifuda4Str = sortedArray[3][@"sentence"][0];
-    torifuda4Str = [torifuda4Str stringByAppendingString:sortedArray[3][@"sentence"][1]];
-    torifuda4Str = [self separateFiveCharactersSentence:torifuda4Str];
+    NSString *card1Str = sortedArray[0][@"sentence"][0];
+    card1Str = [card1Str stringByAppendingString:sortedArray[0][@"sentence"][1]];
+    card1Str = [self separateFiveCharactersSentence:card1Str];
+    NSString *card2Str = sortedArray[1][@"sentence"][0];
+    card2Str = [card2Str stringByAppendingString:sortedArray[1][@"sentence"][1]];
+    card2Str = [self separateFiveCharactersSentence:card2Str];
+    NSString *card3Str = sortedArray[2][@"sentence"][0];
+    card3Str = [card3Str stringByAppendingString:sortedArray[2][@"sentence"][1]];
+    card3Str = [self separateFiveCharactersSentence:card3Str];
+    NSString *card4Str = sortedArray[3][@"sentence"][0];
+    card4Str = [card4Str stringByAppendingString:sortedArray[3][@"sentence"][1]];
+    card4Str = [self separateFiveCharactersSentence:card4Str];
     
     // 表示する文章を指定して取り札viewに文章をaddする
     // 位置は0,0で指定しないと、取り札にaddしたときに変な位置に表示されてしまう
-    CGRect rect = CGRectMake(0, 0, self.torifuda1.frame.size.height, self.torifuda1.frame.size.width);
-    TTTAttributedLabel *label1 = [self makeVerticalWritingLabelWithText:torifuda1Str rect:rect];
-    [self.torifuda1 addSubview:label1];
-    TTTAttributedLabel *label2 = [self makeVerticalWritingLabelWithText:torifuda2Str rect:rect];
-    [self.torifuda2 addSubview:label2];
-    TTTAttributedLabel *label3 = [self makeVerticalWritingLabelWithText:torifuda3Str rect:rect];
-    [self.torifuda3 addSubview:label3];
-    TTTAttributedLabel *label4 = [self makeVerticalWritingLabelWithText:torifuda4Str rect:rect];
-    [self.torifuda4 addSubview:label4];
+    CGRect rect = CGRectMake(0, 0, self.card1.frame.size.height, self.card1.frame.size.width);
+    TTTAttributedLabel *label1 = [self makeVerticalWritingLabelWithText:card1Str rect:rect];
+    [self.card1 addSubview:label1];
+    TTTAttributedLabel *label2 = [self makeVerticalWritingLabelWithText:card2Str rect:rect];
+    [self.card2 addSubview:label2];
+    TTTAttributedLabel *label3 = [self makeVerticalWritingLabelWithText:card3Str rect:rect];
+    [self.card3 addSubview:label3];
+    TTTAttributedLabel *label4 = [self makeVerticalWritingLabelWithText:card4Str rect:rect];
+    [self.card4 addSubview:label4];
     
 }
 
