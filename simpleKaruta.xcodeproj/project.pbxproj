@@ -17,7 +17,7 @@
 		BF3216DB1ECED57C0035C430 /* simpleKarutaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216DA1ECED57C0035C430 /* simpleKarutaTests.m */; };
 		BF3216E61ECED57C0035C430 /* simpleKarutaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216E51ECED57C0035C430 /* simpleKarutaUITests.m */; };
 		BF3216F71ECEDB940035C430 /* Tanka.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216F61ECEDB940035C430 /* Tanka.m */; };
-		BF3216FB1ECEDD880035C430 /* Torifuda.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216FA1ECEDD880035C430 /* Torifuda.m */; };
+		BF3216FB1ECEDD880035C430 /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216FA1ECEDD880035C430 /* Answers.m */; };
 		BF3216FD1ECEDE5A0035C430 /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216FC1ECEDE5A0035C430 /* Questions.m */; };
 		BF72F5731F6A7CD700030F87 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72F5721F6A7CD700030F87 /* CardView.m */; };
 		BF76953B1FBEA5B6002D414B /* circleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7695381FBEA5B6002D414B /* circleIcon.png */; };
@@ -64,13 +64,13 @@
 		BF3216E71ECED57C0035C430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF3216F31ECEDA710035C430 /* PlayingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingViewController.h; sourceTree = "<group>"; };
 		BF3216F61ECEDB940035C430 /* Tanka.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tanka.m; sourceTree = "<group>"; };
-		BF3216FA1ECEDD880035C430 /* Torifuda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Torifuda.m; sourceTree = "<group>"; };
+		BF3216FA1ECEDD880035C430 /* Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answers.m; sourceTree = "<group>"; };
 		BF3216FC1ECEDE5A0035C430 /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
 		BF3216FE1ECEDE6B0035C430 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
 		BF72F5721F6A7CD700030F87 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		BF72F5751F6A7D3800030F87 /* CardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		BF72F5771F6A7DBD00030F87 /* Tanka.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tanka.h; sourceTree = "<group>"; };
-		BF72F5781F6A7DD700030F87 /* Torifuda.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Torifuda.h; sourceTree = "<group>"; };
+		BF72F5781F6A7DD700030F87 /* Answers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Answers.h; sourceTree = "<group>"; };
 		BF7695381FBEA5B6002D414B /* circleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleIcon.png; sourceTree = "<group>"; };
 		BF7695391FBEA5B6002D414B /* pauseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseIcon.png; sourceTree = "<group>"; };
 		BF76953A1FBEA5B6002D414B /* wrongIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrongIcon.png; sourceTree = "<group>"; };
@@ -109,8 +109,8 @@
 			children = (
 				BF72F5771F6A7DBD00030F87 /* Tanka.h */,
 				BF3216F61ECEDB940035C430 /* Tanka.m */,
-				BF72F5781F6A7DD700030F87 /* Torifuda.h */,
-				BF3216FA1ECEDD880035C430 /* Torifuda.m */,
+				BF72F5781F6A7DD700030F87 /* Answers.h */,
+				BF3216FA1ECEDD880035C430 /* Answers.m */,
 				BF3216FE1ECEDE6B0035C430 /* Questions.h */,
 				BF3216FC1ECEDE5A0035C430 /* Questions.m */,
 			);
@@ -340,7 +340,7 @@
 				BF3216C81ECED57C0035C430 /* TopViewController.m in Sources */,
 				BF72F5731F6A7CD700030F87 /* CardView.m in Sources */,
 				BFD9CCC81F5E9CDE007E9578 /* TTTAttributedLabel.m in Sources */,
-				BF3216FB1ECEDD880035C430 /* Torifuda.m in Sources */,
+				BF3216FB1ECEDD880035C430 /* Answers.m in Sources */,
 				BF3216C51ECED57C0035C430 /* AppDelegate.m in Sources */,
 				BF3216FD1ECEDE5A0035C430 /* Questions.m in Sources */,
 				BF3216C21ECED57C0035C430 /* main.m in Sources */,

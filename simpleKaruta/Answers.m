@@ -1,5 +1,5 @@
 //
-//  Torifuda.m
+//  Answers.m
 //  simpleKaruta
 //  取り札用の下の句配列を作成するクラス
 
@@ -7,15 +7,15 @@
 //  Copyright © 2017年 ahausagi. All rights reserved.
 //
 
-#import "Torifuda.h"
+#import "Answers.h"
 #import "Tanka.h"
 
-@interface Torifuda ()
+@interface Answers ()
 
 @end
 
 
-@implementation Torifuda
+@implementation Answers
 
 /**
  *  歌データの下の句をランダムに4つ格納した配列を作成する
@@ -42,7 +42,7 @@
 
 - (NSMutableArray *) makeAnswerArrayWithQuestions:(NSArray *) questionArray
 {
-    NSMutableArray *torifudaArray = [NSMutableArray array];
+    NSMutableArray *answersArray = [NSMutableArray array];
     
     for (NSDictionary *dict in questionArray) {
         
@@ -82,13 +82,13 @@
 
         }
         
-        [torifudaArray addObject:answer];
+        [answersArray addObject:answer];
         
     }
 
-    NSLog(@"torifuda array \n%@",[torifudaArray description]);
+    NSLog(@"answers array \n%@",[answersArray description]);
     
-    return torifudaArray;
+    return answersArray;
 
 }
 

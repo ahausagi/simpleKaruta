@@ -10,7 +10,7 @@
 #import "TopViewController.h"
 #import "PlayingViewController.h"
 #import "Questions.h"
-#import "Torifuda.h"
+#import "Answers.h"
 
 @interface TopViewController ()
 
@@ -44,8 +44,8 @@
         playingVC.questionArray = questionArray;
 
         // 取り札配列を作成して次画面へ渡す
-        NSMutableArray *torifudaArray = [[[Torifuda alloc] init] makeAnswerArrayWithQuestions:questionArray];
-        playingVC.torifudaArray = torifudaArray;
+        NSMutableArray *answersArray = [[[Answers alloc] init] makeAnswerArrayWithQuestions:questionArray];
+        playingVC.answersArray = answersArray;
         
     } else {
         // TODO: つづきから　タップ時の処理とか書き足す

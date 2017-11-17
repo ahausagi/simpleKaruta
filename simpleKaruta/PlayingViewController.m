@@ -22,15 +22,12 @@
 @implementation PlayingViewController
 
 - (void)viewDidLoad {
-    NSLog(@"questionArray count:%ld",[self.questionArray count]);
-    NSLog(@"torifudaArray count:%ld",[self.torifudaArray count]);
-
     // 各数字を初期化
     self.totalNumberQuestions = 0;
     self.questionCount = 0;
     self.correctCount = 0;
     
-    if ([self.questionArray count] > 0 && [self.torifudaArray count] > 0) {
+    if ([self.questionArray count] > 0 && [self.answersArray count] > 0) {
        
         self.totalNumberQuestions = [self.questionArray count];
         
@@ -47,13 +44,13 @@
         [self changeKaminokuWithCount:self.questionCount];
         
         // 取り札を表示
-        [self changeTorifudaWithCount:self.questionCount];
+        [self changeCardsWithCount:self.questionCount];
         
         // 正解・不正解の画像を作る
         [self settingImgaes];
         
     } else {
-        NSLog(@"question or torifuda not found");
+        NSLog(@"question or answer not found");
     }
 }
 
@@ -143,7 +140,7 @@
 
     // 問題文と取り札の表示を更新
     [self changeKaminokuWithCount:self.questionCount];
-    [self changeTorifudaWithCount:self.questionCount];
+    [self changeCardsWithCount:self.questionCount];
     
 }
 
@@ -166,7 +163,7 @@
     
     // 問題文と取り札の表示を更新
     [self changeKaminokuWithCount:self.questionCount];
-    [self changeTorifudaWithCount:self.questionCount];
+    [self changeCardsWithCount:self.questionCount];
 
 }
 
@@ -193,7 +190,7 @@
 }
 
 
-- (void)changeTorifudaWithCount:(NSInteger)count {
+- (void)changeCardsWithCount:(NSInteger)count {
     
     // TODO:ここもっと効率的にできないか？？
     for (UIView *view in [self.card1 subviews]) {
@@ -210,7 +207,7 @@
     }
 
 
-    NSArray *lastPartsArray = self.torifudaArray[count];  // 問題文に対応した下の句リスト
+    NSArray *lastPartsArray = self.answersArray[count];  // 問題文に対応した下の句リスト
     // 下の句をランダムに並べ替える
     NSMutableArray *sortedArray = [NSMutableArray array];  // ランダムに並べ替えたリスト
     

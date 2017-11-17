@@ -1,5 +1,5 @@
 //
-//  Torifuda.h
+//  Answers.h
 //  simpleKaruta
 //  取り札用の下の句配列を作成するクラス
 
@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Torifuda : NSObject
+@interface Answers : NSObject
 
 @property (nonatomic) NSMutableArray *answerArray;    // 下の句を出題順に格納する
 

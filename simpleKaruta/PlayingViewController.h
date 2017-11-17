@@ -14,7 +14,7 @@
 
 // 遷移前画面から受け取る情報
 @property (nonatomic) NSMutableArray *questionArray;
-@property (nonatomic) NSMutableArray *torifudaArray;
+@property (nonatomic) NSMutableArray *answersArray;
 
 // storyboardのアイテム
 @property (weak, nonatomic) IBOutlet UILabel *questionCountLabel;
