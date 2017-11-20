@@ -20,5 +20,6 @@
 @property (nonatomic) TTTAttributedLabel *text; // 下の句を表示する縦書きラベル
 
 - (void) setGesture;
+- (void) displayNextText:(NSDictionary *)dict;
 @end
 

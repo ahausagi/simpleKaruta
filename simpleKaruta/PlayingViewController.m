@@ -42,7 +42,7 @@
         [self changeCorrectCountLabelWithCount:self.correctCount];
         
         // 1問目を表示
-        [self changeKaminokuWithCount:self.questionCount];
+        [self changeQuestionTextWithCount:self.questionCount];
         
         // 取り札を表示
         [self changeCardsWithCount:self.questionCount];
@@ -157,7 +157,7 @@
         [self changeCorrectCountLabelWithCount:self.correctCount];
         
         // 問題文と取り札の表示を更新
-        [self changeKaminokuWithCount:self.questionCount];
+        [self changeQuestionTextWithCount:self.questionCount];
         [self changeCardsWithCount:self.questionCount];
         
     } else {
@@ -189,7 +189,7 @@
         [self changeQuestionCountLabelWithCount:self.questionCount];
         
         // 問題文と取り札の表示を更新
-        [self changeKaminokuWithCount:self.questionCount];
+        [self changeQuestionTextWithCount:self.questionCount];
         [self changeCardsWithCount:self.questionCount];
         
     } else {
@@ -207,13 +207,26 @@
 
 #pragma mark - PauseVCDelegate メソッド
 - (void)backTopViewFromPause {
+    self.view.userInteractionEnabled = NO;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
 #pragma mark - 表示を変える系
+// 出題数の表示を変える
+- (void)changeQuestionCountLabelWithCount:(NSInteger)count {
+    self.questionCountLabel.text = [NSString stringWithFormat:@"%ld/%ld",count+1,self.totalNumberQuestions];
+}
+
+
+// 正答数の表示を変える
+- (void)changeCorrectCountLabelWithCount:(NSInteger)count {
+    self.correctCountLabel.text = [NSString stringWithFormat:@"正答数 %ld",count];
+}
+
+
 // 問題文の表示を変える
-- (void)changeKaminokuWithCount:(NSInteger)count {
+- (void)changeQuestionTextWithCount:(NSInteger)count {
     
     self.kaminoku1.text = self.questionArray[count][@"sentence"][0];
     self.kaminoku2.text = self.questionArray[count][@"sentence"][1];
@@ -237,21 +250,6 @@
 // 取り札の表示を変える
 - (void)changeCardsWithCount:(NSInteger)count {
     
-    // TODO:ここもっと効率的にできないか？？
-    for (UIView *view in [self.card1 subviews]) {
-        [view removeFromSuperview];
-    }
-    for (UIView *view in [self.card2 subviews]) {
-        [view removeFromSuperview];
-    }
-    for (UIView *view in [self.card3 subviews]) {
-        [view removeFromSuperview];
-    }
-    for (UIView *view in [self.card4 subviews]) {
-        [view removeFromSuperview];
-    }
-
-
     NSArray *lastPartsArray = self.answersArray[count];  // 問題文に対応した下の句リスト
     // 下の句をランダムに並べ替える
     NSMutableArray *sortedArray = [NSMutableArray array];  // ランダムに並べ替えたリスト
@@ -277,94 +275,12 @@
         [sortedArray addObject:lastPartsArray[[num integerValue]]];
     }
     
-    // 取り札ビューに歌番号を持たせる
-    self.card1.tankaNo = [sortedArray[0][@"no"] integerValue];
-    self.card2.tankaNo = [sortedArray[1][@"no"] integerValue];
-    self.card3.tankaNo = [sortedArray[2][@"no"] integerValue];
-    self.card4.tankaNo = [sortedArray[3][@"no"] integerValue];
-    
-    
-    // 並べ替えた下の句をひとつずつ縦書き変換する
-    NSString *card1Str = sortedArray[0][@"sentence"][0];
-    card1Str = [card1Str stringByAppendingString:sortedArray[0][@"sentence"][1]];
-    card1Str = [self separateFiveCharactersSentence:card1Str];
-    NSString *card2Str = sortedArray[1][@"sentence"][0];
-    card2Str = [card2Str stringByAppendingString:sortedArray[1][@"sentence"][1]];
-    card2Str = [self separateFiveCharactersSentence:card2Str];
-    NSString *card3Str = sortedArray[2][@"sentence"][0];
-    card3Str = [card3Str stringByAppendingString:sortedArray[2][@"sentence"][1]];
-    card3Str = [self separateFiveCharactersSentence:card3Str];
-    NSString *card4Str = sortedArray[3][@"sentence"][0];
-    card4Str = [card4Str stringByAppendingString:sortedArray[3][@"sentence"][1]];
-    card4Str = [self separateFiveCharactersSentence:card4Str];
-    
-    // 表示する文章を指定して取り札viewに文章をaddする
-    // 位置は0,0で指定しないと、取り札にaddしたときに変な位置に表示されてしまう
-    CGRect rect = CGRectMake(0, 0, self.card1.frame.size.height, self.card1.frame.size.width);
-    TTTAttributedLabel *label1 = [self makeVerticalWritingLabelWithText:card1Str rect:rect];
-    [self.card1 addSubview:label1];
-    TTTAttributedLabel *label2 = [self makeVerticalWritingLabelWithText:card2Str rect:rect];
-    [self.card2 addSubview:label2];
-    TTTAttributedLabel *label3 = [self makeVerticalWritingLabelWithText:card3Str rect:rect];
-    [self.card3 addSubview:label3];
-    TTTAttributedLabel *label4 = [self makeVerticalWritingLabelWithText:card4Str rect:rect];
-    [self.card4 addSubview:label4];
-    
+    // 表示を更新
+    [self.card1 displayNextText:sortedArray[0]];
+    [self.card2 displayNextText:sortedArray[1]];
+    [self.card3 displayNextText:sortedArray[2]];
+    [self.card4 displayNextText:sortedArray[3]];
 }
 
-
-// 出題数の表示を変える
-- (void)changeQuestionCountLabelWithCount:(NSInteger)count {
-    self.questionCountLabel.text = [NSString stringWithFormat:@"%ld/%ld",count+1,self.totalNumberQuestions];
-}
-
-
-// 正答数の表示を変える
-- (void)changeCorrectCountLabelWithCount:(NSInteger)count {
-    self.correctCountLabel.text = [NSString stringWithFormat:@"正答数 %ld",count];
-}
-
-
-// 取り札表示用文言を作る
-// 5文字ずつで改行したテキストを返す
--(NSString *)separateFiveCharactersSentence:(NSString *)text {
-
-    NSString *formattedText = @"";
-    formattedText = [[text substringToIndex:5] stringByAppendingString:@"\n"];
-    formattedText = [[formattedText stringByAppendingString:[text substringWithRange:NSMakeRange(5, 5)]] stringByAppendingString:@"\n"];
-    formattedText = [formattedText stringByAppendingString:[text substringFromIndex:10]];
-
-    return formattedText;
-}
-
-
-// 縦書きラベルを作るメソッド
-- (TTTAttributedLabel *)makeVerticalWritingLabelWithText:(NSString *)text rect:(CGRect) rect {
-    
-    TTTAttributedLabel *label = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, rect.size.height)];
-    label.backgroundColor = [UIColor clearColor];
-    
-    // setText の前にラベルオプションを変更する
-    label.textColor = [UIColor blackColor];
-    label.numberOfLines = 0;
-    label.font = [UIFont systemFontOfSize:28];
-    label.verticalAlignment = TTTAttributedLabelVerticalAlignmentTop;
-    
-    // ラベルを90°回転させる
-    CGFloat angle = M_PI/2;
-    label.transform = CGAffineTransformMakeRotation(angle);
-    // 表示する文章を指定する
-    [label setText:text afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString)
-    {
-        // 文章を縦書きに変更する
-        [mutableAttributedString addAttribute:(NSString *)kCTVerticalFormsAttributeName value:[NSNumber numberWithBool:YES] range:NSMakeRange(0, [mutableAttributedString length])];
-        
-        return mutableAttributedString;
-    }];
-
-    label.frame = CGRectMake(rect.origin.x, rect.origin.y, label.frame.size.width, label.frame.size.height);
-
-    return label;
-}
 
 @end

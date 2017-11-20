@@ -26,7 +26,7 @@
                                 <rect key="frame" x="16" y="334" width="343" height="333"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdF-Xn-Axx">
-                                        <rect key="frame" x="46.5" y="47.5" width="250" height="60"/>
+                                        <rect key="frame" x="46.5" y="46.5" width="250" height="60"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="A50-qo-wdk"/>
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKm-2E-PAE">
-                                        <rect key="frame" x="46.5" y="227.5" width="250" height="60"/>
+                                        <rect key="frame" x="46.5" y="226.5" width="250" height="60"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="2dB-5o-sL4"/>
@@ -53,7 +53,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edb-1c-dex">
-                                        <rect key="frame" x="46.5" y="137.5" width="250" height="60"/>
+                                        <rect key="frame" x="46.5" y="136.5" width="250" height="60"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Yd0-IU-24f"/>
