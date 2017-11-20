@@ -228,19 +228,19 @@
 // 問題文の表示を変える
 - (void)changeQuestionTextWithCount:(NSInteger)count {
     
-    self.kaminoku1.text = self.questionArray[count][@"sentence"][0];
-    self.kaminoku2.text = self.questionArray[count][@"sentence"][1];
-    self.kaminoku3.text = self.questionArray[count][@"sentence"][2];
+    self.questionText1.text = self.questionArray[count][@"sentence"][0];
+    self.questionText2.text = self.questionArray[count][@"sentence"][1];
+    self.questionText3.text = self.questionArray[count][@"sentence"][2];
 
-    self.kaminoku1.alpha = 0;
-    self.kaminoku2.alpha = 0;
-    self.kaminoku3.alpha = 0;
+    self.questionText1.alpha = 0;
+    self.questionText2.alpha = 0;
+    self.questionText3.alpha = 0;
 
     // ゆっくり表示
     [UIView animateWithDuration:1
                           delay:0
                         options:UIViewAnimationOptionLayoutSubviews
-                     animations:^{_kaminoku1.alpha = 1;_kaminoku2.alpha = 1;_kaminoku3.alpha = 1;}
+                     animations:^{_questionText1.alpha = 1;_questionText2.alpha = 1;_questionText3.alpha = 1;}
                      completion:nil];
 
 

@@ -346,10 +346,10 @@
                         <outlet property="card3" destination="KoL-Qs-g5V" id="E9K-GO-08D"/>
                         <outlet property="card4" destination="NVW-f0-VG3" id="S9b-E0-fRl"/>
                         <outlet property="correctCountLabel" destination="PBL-p8-qca" id="EI4-5F-K5i"/>
-                        <outlet property="kaminoku1" destination="lvw-Hz-Ca5" id="abh-XM-Gm0"/>
-                        <outlet property="kaminoku2" destination="pQn-zz-E3X" id="Nil-yZ-p59"/>
-                        <outlet property="kaminoku3" destination="G7i-Xd-LRt" id="cRw-Xd-tha"/>
                         <outlet property="questionCountLabel" destination="Xie-II-FIO" id="0iC-oa-eoz"/>
+                        <outlet property="questionText1" destination="lvw-Hz-Ca5" id="9l4-es-8ac"/>
+                        <outlet property="questionText2" destination="pQn-zz-E3X" id="pe6-XZ-pT0"/>
+                        <outlet property="questionText3" destination="G7i-Xd-LRt" id="Tmg-7u-SRg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HiB-fV-OHo" userLabel="First Responder" sceneMemberID="firstResponder"/>

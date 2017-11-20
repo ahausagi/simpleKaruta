@@ -22,9 +22,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *correctCountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *stopButton;
-@property (weak, nonatomic) IBOutlet UILabel *kaminoku1;
-@property (weak, nonatomic) IBOutlet UILabel *kaminoku2;
-@property (weak, nonatomic) IBOutlet UILabel *kaminoku3;
+
+@property (weak, nonatomic) IBOutlet UILabel *questionText1;
+@property (weak, nonatomic) IBOutlet UILabel *questionText2;
+@property (weak, nonatomic) IBOutlet UILabel *questionText3;
 
 @property (weak, nonatomic) IBOutlet CardView *card1;
 @property (weak, nonatomic) IBOutlet CardView *card2;
