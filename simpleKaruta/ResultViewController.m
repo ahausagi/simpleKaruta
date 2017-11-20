@@ -34,7 +34,7 @@
 // はじめにもどるボタン
 - (IBAction)tappedBackButton:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-    [self.delegate backTopView];
+    [self.delegate backTopViewFromResult];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A7D877C1ED0489E00343689 /* allTankaData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D877B1ED0489E00343689 /* allTankaData.json */; };
+		BF0792201FC2954D007A3F73 /* PauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF07921F1FC2954D007A3F73 /* PauseViewController.m */; };
 		BF3216C21ECED57C0035C430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C11ECED57C0035C430 /* main.m */; };
 		BF3216C51ECED57C0035C430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C41ECED57C0035C430 /* AppDelegate.m */; };
 		BF3216C81ECED57C0035C430 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C71ECED57C0035C430 /* TopViewController.m */; };
@@ -47,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		0A7D877B1ED0489E00343689 /* allTankaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allTankaData.json; sourceTree = "<group>"; };
+		BF07921E1FC2954D007A3F73 /* PauseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseViewController.h; sourceTree = "<group>"; };
+		BF07921F1FC2954D007A3F73 /* PauseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseViewController.m; sourceTree = "<group>"; };
 		BF3216BD1ECED57C0035C430 /* simpleKaruta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleKaruta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3216C11ECED57C0035C430 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BF3216C31ECED57C0035C430 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -152,6 +155,8 @@
 				BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */,
 				BF76953E1FBED6F0002D414B /* ResultViewController.h */,
 				BF76953F1FBED6F0002D414B /* ResultViewController.m */,
+				BF07921E1FC2954D007A3F73 /* PauseViewController.h */,
+				BF07921F1FC2954D007A3F73 /* PauseViewController.m */,
 				BF72F5751F6A7D3800030F87 /* CardView.h */,
 				BF72F5721F6A7CD700030F87 /* CardView.m */,
 				BF3216C91ECED57C0035C430 /* Main.storyboard */,
@@ -349,6 +354,7 @@
 				BF3216FB1ECEDD880035C430 /* Answers.m in Sources */,
 				BF3216C51ECED57C0035C430 /* AppDelegate.m in Sources */,
 				BF3216FD1ECEDE5A0035C430 /* Questions.m in Sources */,
+				BF0792201FC2954D007A3F73 /* PauseViewController.m in Sources */,
 				BF3216C21ECED57C0035C430 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

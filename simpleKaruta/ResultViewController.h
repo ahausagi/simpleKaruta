@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 @protocol ResultVCDelegate <NSObject>
-- (void)backTopView;
+- (void)backTopViewFromResult;
 @end
 
 @interface ResultViewController : UIViewController

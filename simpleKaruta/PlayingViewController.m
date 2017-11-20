@@ -88,13 +88,17 @@
     self.wrongIcon.hidden = YES;
 }
 
-#pragma mark - ボタンタップ時処理
-// 閉じるボタン
-// TODO:ゆくゆくはpause button にして、一時停止orゲーム終了を選べるようにしたい
-- (IBAction)tappedStopButton:(id)sender {
-
-    [self dismissViewControllerAnimated:YES completion:nil];
+#pragma mark - 遷移処理
+// 一時停止画面へ遷移
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"pauseSegue"]) {
+        PauseViewController *pauseVC = segue.destinationViewController;
+        pauseVC.delegate = self;
+        
+    } else { /* 何もしない */ }
 }
+
 
 // 結果画面を表示する
 - (void)transitionToResultVC {
@@ -197,7 +201,12 @@
 }
 
 #pragma mark - ResultVCDelegate メソッド
-- (void)backTopView {
+- (void)backTopViewFromResult {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - PauseVCDelegate メソッド
+- (void)backTopViewFromPause {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
