@@ -7,6 +7,7 @@
 //
 
 #import "PlayingViewController.h"
+#import "ResultViewController.h"
 #import "TTTAttributedLabel.h"
 
 @interface PlayingViewController()
@@ -91,9 +92,19 @@
 // 閉じるボタン
 // TODO:ゆくゆくはpause button にして、一時停止orゲーム終了を選べるようにしたい
 - (IBAction)tappedStopButton:(id)sender {
-    NSLog(@"tapped stop button!");
-    
+
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+// 結果画面を表示する
+- (void)transitionToResultVC {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ResultViewController *resultVC = [storyboard instantiateViewControllerWithIdentifier:@"ResultViewController"];
+    resultVC.delegate = self;
+    resultVC.modalPresentationStyle = UIModalTransitionStyleCrossDissolve;
+    resultVC.correctCount = self.correctCount;
+    resultVC.questionCount = self.totalNumberQuestions;
+    [self presentViewController:resultVC animated:YES completion:nil];
 }
 
 #pragma mark - CardViewDelegate メソッド
@@ -135,13 +146,22 @@
     // 各カウントを更新
     self.questionCount++;
     self.correctCount++;
-    [self changeQuestionCountLabelWithCount:self.questionCount];
-    [self changeCorrectCountLabelWithCount:self.correctCount];
-
-    // 問題文と取り札の表示を更新
-    [self changeKaminokuWithCount:self.questionCount];
-    [self changeCardsWithCount:self.questionCount];
     
+    if (self.questionCount < self.totalNumberQuestions) {
+        // 何問目、正答数の表示を更新
+        [self changeQuestionCountLabelWithCount:self.questionCount];
+        [self changeCorrectCountLabelWithCount:self.correctCount];
+        
+        // 問題文と取り札の表示を更新
+        [self changeKaminokuWithCount:self.questionCount];
+        [self changeCardsWithCount:self.questionCount];
+        
+    } else {
+        // 誤タップ防止
+        self.view.userInteractionEnabled = NO;
+        // 結果表示
+        [self transitionToResultVC];
+    }
 }
 
 
@@ -157,20 +177,35 @@
                      animations:^{self.wrongIcon.alpha = 0;}
                      completion:nil];
     
-    // 各カウントを更新
+    // カウントを更新
     self.questionCount++;
-    [self changeQuestionCountLabelWithCount:self.questionCount];
     
-    // 問題文と取り札の表示を更新
-    [self changeKaminokuWithCount:self.questionCount];
-    [self changeCardsWithCount:self.questionCount];
+    if (self.questionCount < self.totalNumberQuestions) {
+        // 何問目、正答数の表示を更新
+        [self changeQuestionCountLabelWithCount:self.questionCount];
+        
+        // 問題文と取り札の表示を更新
+        [self changeKaminokuWithCount:self.questionCount];
+        [self changeCardsWithCount:self.questionCount];
+        
+    } else {
+        // 誤タップ防止
+        self.view.userInteractionEnabled = NO;
+        // 結果表示
+        [self transitionToResultVC];
+    }
+}
 
+#pragma mark - ResultVCDelegate メソッド
+- (void)backTopView {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
 #pragma mark - 表示を変える系
 // 問題文の表示を変える
 - (void)changeKaminokuWithCount:(NSInteger)count {
+    
     self.kaminoku1.text = self.questionArray[count][@"sentence"][0];
     self.kaminoku2.text = self.questionArray[count][@"sentence"][1];
     self.kaminoku3.text = self.questionArray[count][@"sentence"][2];
@@ -190,6 +225,7 @@
 }
 
 
+// 取り札の表示を変える
 - (void)changeCardsWithCount:(NSInteger)count {
     
     // TODO:ここもっと効率的にできないか？？
@@ -266,6 +302,7 @@
     [self.card4 addSubview:label4];
     
 }
+
 
 // 出題数の表示を変える
 - (void)changeQuestionCountLabelWithCount:(NSInteger)count {

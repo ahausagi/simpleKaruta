@@ -23,6 +23,7 @@
 		BF76953B1FBEA5B6002D414B /* circleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7695381FBEA5B6002D414B /* circleIcon.png */; };
 		BF76953C1FBEA5B6002D414B /* pauseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7695391FBEA5B6002D414B /* pauseIcon.png */; };
 		BF76953D1FBEA5B6002D414B /* wrongIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF76953A1FBEA5B6002D414B /* wrongIcon.png */; };
+		BF7695401FBED6F0002D414B /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76953F1FBED6F0002D414B /* ResultViewController.m */; };
 		BFD9CCC81F5E9CDE007E9578 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD9CCC71F5E9CDE007E9578 /* TTTAttributedLabel.m */; };
 		BFE5EF441ECEDFB900BFBC28 /* PlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,8 @@
 		BF7695381FBEA5B6002D414B /* circleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleIcon.png; sourceTree = "<group>"; };
 		BF7695391FBEA5B6002D414B /* pauseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseIcon.png; sourceTree = "<group>"; };
 		BF76953A1FBEA5B6002D414B /* wrongIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrongIcon.png; sourceTree = "<group>"; };
+		BF76953E1FBED6F0002D414B /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		BF76953F1FBED6F0002D414B /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		BFD9CCC61F5E9CDE007E9578 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		BFD9CCC71F5E9CDE007E9578 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingViewController.m; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				BF3216C71ECED57C0035C430 /* TopViewController.m */,
 				BF3216F31ECEDA710035C430 /* PlayingViewController.h */,
 				BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */,
+				BF76953E1FBED6F0002D414B /* ResultViewController.h */,
+				BF76953F1FBED6F0002D414B /* ResultViewController.m */,
 				BF72F5751F6A7D3800030F87 /* CardView.h */,
 				BF72F5721F6A7CD700030F87 /* CardView.m */,
 				BF3216C91ECED57C0035C430 /* Main.storyboard */,
@@ -338,6 +343,7 @@
 				BFE5EF441ECEDFB900BFBC28 /* PlayingViewController.m in Sources */,
 				BF3216F71ECEDB940035C430 /* Tanka.m in Sources */,
 				BF3216C81ECED57C0035C430 /* TopViewController.m in Sources */,
+				BF7695401FBED6F0002D414B /* ResultViewController.m in Sources */,
 				BF72F5731F6A7CD700030F87 /* CardView.m in Sources */,
 				BFD9CCC81F5E9CDE007E9578 /* TTTAttributedLabel.m in Sources */,
 				BF3216FB1ECEDD880035C430 /* Answers.m in Sources */,
