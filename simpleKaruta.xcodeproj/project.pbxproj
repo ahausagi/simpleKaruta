@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A7D877C1ED0489E00343689 /* allTankaData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D877B1ED0489E00343689 /* allTankaData.json */; };
+		88ADB03667F371F84BA25457 /* libPods-simpleKaruta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BE6BF0FB57277ABB27D39C /* libPods-simpleKaruta.a */; };
+		9BD9ACF071F77955526C9EA6 /* libPods-simpleKarutaUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C81DD5420F7243EE5AB932 /* libPods-simpleKarutaUITests.a */; };
+		B37B2013D7D9C2D691776618 /* libPods-simpleKarutaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301160D0055E46CC1ACD9456 /* libPods-simpleKarutaTests.a */; };
 		BF0792201FC2954D007A3F73 /* PauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF07921F1FC2954D007A3F73 /* PauseViewController.m */; };
 		BF3216C21ECED57C0035C430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C11ECED57C0035C430 /* main.m */; };
 		BF3216C51ECED57C0035C430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C41ECED57C0035C430 /* AppDelegate.m */; };
@@ -47,7 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001A29B46FFC878D2CA4CAD5 /* Pods-simpleKarutaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleKarutaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-simpleKarutaTests/Pods-simpleKarutaTests.release.xcconfig"; sourceTree = "<group>"; };
 		0A7D877B1ED0489E00343689 /* allTankaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allTankaData.json; sourceTree = "<group>"; };
+		301160D0055E46CC1ACD9456 /* libPods-simpleKarutaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-simpleKarutaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C81DD5420F7243EE5AB932 /* libPods-simpleKarutaUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-simpleKarutaUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		374DDFDF2676DC69F59A62EF /* Pods-simpleKarutaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleKarutaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simpleKarutaUITests/Pods-simpleKarutaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		48BE6BF0FB57277ABB27D39C /* libPods-simpleKaruta.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-simpleKaruta.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		848249E45A9874FAB2153686 /* Pods-simpleKarutaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleKarutaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-simpleKarutaUITests/Pods-simpleKarutaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B6C914D3D4F5319FDE17F84A /* Pods-simpleKarutaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleKarutaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simpleKarutaTests/Pods-simpleKarutaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA7B20748E860737B763CADF /* Pods-simpleKaruta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleKaruta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simpleKaruta/Pods-simpleKaruta.debug.xcconfig"; sourceTree = "<group>"; };
 		BF07921E1FC2954D007A3F73 /* PauseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseViewController.h; sourceTree = "<group>"; };
 		BF07921F1FC2954D007A3F73 /* PauseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseViewController.m; sourceTree = "<group>"; };
 		BF3216BD1ECED57C0035C430 /* simpleKaruta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleKaruta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +94,7 @@
 		BFD9CCC61F5E9CDE007E9578 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		BFD9CCC71F5E9CDE007E9578 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingViewController.m; sourceTree = "<group>"; };
+		C06F94A6501ECFE8B091F8C6 /* Pods-simpleKaruta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleKaruta.release.xcconfig"; path = "Pods/Target Support Files/Pods-simpleKaruta/Pods-simpleKaruta.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88ADB03667F371F84BA25457 /* libPods-simpleKaruta.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37B2013D7D9C2D691776618 /* libPods-simpleKarutaTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD9ACF071F77955526C9EA6 /* libPods-simpleKarutaUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +138,16 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		1CC5D5930E107601927D2F50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48BE6BF0FB57277ABB27D39C /* libPods-simpleKaruta.a */,
+				301160D0055E46CC1ACD9456 /* libPods-simpleKarutaTests.a */,
+				31C81DD5420F7243EE5AB932 /* libPods-simpleKarutaUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF3216B41ECED57C0035C430 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +155,8 @@
 				BF3216D91ECED57C0035C430 /* simpleKarutaTests */,
 				BF3216E41ECED57C0035C430 /* simpleKarutaUITests */,
 				BF3216BE1ECED57C0035C430 /* Products */,
+				D52016D5CCBB329D6806F351 /* Pods */,
+				1CC5D5930E107601927D2F50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +235,19 @@
 			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
+		D52016D5CCBB329D6806F351 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA7B20748E860737B763CADF /* Pods-simpleKaruta.debug.xcconfig */,
+				C06F94A6501ECFE8B091F8C6 /* Pods-simpleKaruta.release.xcconfig */,
+				B6C914D3D4F5319FDE17F84A /* Pods-simpleKarutaTests.debug.xcconfig */,
+				001A29B46FFC878D2CA4CAD5 /* Pods-simpleKarutaTests.release.xcconfig */,
+				374DDFDF2676DC69F59A62EF /* Pods-simpleKarutaUITests.debug.xcconfig */,
+				848249E45A9874FAB2153686 /* Pods-simpleKarutaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3216EA1ECED57C0035C430 /* Build configuration list for PBXNativeTarget "simpleKaruta" */;
 			buildPhases = (
+				778DE13A2238C6A9F06D1083 /* [CP] Check Pods Manifest.lock */,
 				BF3216B91ECED57C0035C430 /* Sources */,
 				BF3216BA1ECED57C0035C430 /* Frameworks */,
 				BF3216BB1ECED57C0035C430 /* Resources */,
+				D4FCBF44F3166505AAB3EBD7 /* [CP] Embed Pods Frameworks */,
+				CB597C159316C46D3E3F0282 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3216ED1ECED57C0035C430 /* Build configuration list for PBXNativeTarget "simpleKarutaTests" */;
 			buildPhases = (
+				E8E827E811BE9CD64F1B8D09 /* [CP] Check Pods Manifest.lock */,
 				BF3216D21ECED57C0035C430 /* Sources */,
 				BF3216D31ECED57C0035C430 /* Frameworks */,
 				BF3216D41ECED57C0035C430 /* Resources */,
+				42AD504FE19F9FBBD65E5454 /* [CP] Embed Pods Frameworks */,
+				47D2C428E8612685B925E125 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,9 +296,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3216F01ECED57C0035C430 /* Build configuration list for PBXNativeTarget "simpleKarutaUITests" */;
 			buildPhases = (
+				4EDE3788E916DD68B48E1823 /* [CP] Check Pods Manifest.lock */,
 				BF3216DD1ECED57C0035C430 /* Sources */,
 				BF3216DE1ECED57C0035C430 /* Frameworks */,
 				BF3216DF1ECED57C0035C430 /* Resources */,
+				C634E1BA44F6F2E530096F67 /* [CP] Embed Pods Frameworks */,
+				F2CAD9362B728B42DF0ED1F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -339,6 +388,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42AD504FE19F9FBBD65E5454 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-simpleKarutaTests/Pods-simpleKarutaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47D2C428E8612685B925E125 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-simpleKarutaTests/Pods-simpleKarutaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EDE3788E916DD68B48E1823 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-simpleKarutaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		778DE13A2238C6A9F06D1083 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-simpleKaruta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C634E1BA44F6F2E530096F67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-simpleKarutaUITests/Pods-simpleKarutaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB597C159316C46D3E3F0282 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-simpleKaruta/Pods-simpleKaruta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4FCBF44F3166505AAB3EBD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-simpleKaruta/Pods-simpleKaruta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8E827E811BE9CD64F1B8D09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-simpleKarutaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2CAD9362B728B42DF0ED1F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-simpleKarutaUITests/Pods-simpleKarutaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF3216B91ECED57C0035C430 /* Sources */ = {
@@ -504,6 +700,7 @@
 		};
 		BF3216EB1ECED57C0035C430 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA7B20748E860737B763CADF /* Pods-simpleKaruta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = simpleKaruta/Info.plist;
@@ -517,6 +714,7 @@
 		};
 		BF3216EC1ECED57C0035C430 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C06F94A6501ECFE8B091F8C6 /* Pods-simpleKaruta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = simpleKaruta/Info.plist;
@@ -530,6 +728,7 @@
 		};
 		BF3216EE1ECED57C0035C430 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6C914D3D4F5319FDE17F84A /* Pods-simpleKarutaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = simpleKarutaTests/Info.plist;
@@ -542,6 +741,7 @@
 		};
 		BF3216EF1ECED57C0035C430 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 001A29B46FFC878D2CA4CAD5 /* Pods-simpleKarutaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = simpleKarutaTests/Info.plist;
@@ -554,6 +754,7 @@
 		};
 		BF3216F11ECED57C0035C430 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374DDFDF2676DC69F59A62EF /* Pods-simpleKarutaUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = simpleKarutaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -565,6 +766,7 @@
 		};
 		BF3216F21ECED57C0035C430 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 848249E45A9874FAB2153686 /* Pods-simpleKarutaUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = simpleKarutaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
