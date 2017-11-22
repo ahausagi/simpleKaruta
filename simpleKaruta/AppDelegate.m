@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DBManager.h"
 #import "Tanka.h"
 
 @interface AppDelegate ()
@@ -17,6 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // DB作成
+    [[DBManager new] dbGenerateOrUpdate];
     
     // 歌情報の初期設定
     [Tanka.sharedManager prepareAllTanka];

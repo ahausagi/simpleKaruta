@@ -12,6 +12,7 @@
 		9BD9ACF071F77955526C9EA6 /* libPods-simpleKarutaUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C81DD5420F7243EE5AB932 /* libPods-simpleKarutaUITests.a */; };
 		B37B2013D7D9C2D691776618 /* libPods-simpleKarutaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301160D0055E46CC1ACD9456 /* libPods-simpleKarutaTests.a */; };
 		BF0792201FC2954D007A3F73 /* PauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF07921F1FC2954D007A3F73 /* PauseViewController.m */; };
+		BF198A891FC40D57000417EF /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF198A881FC40D57000417EF /* DBManager.m */; };
 		BF3216C21ECED57C0035C430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C11ECED57C0035C430 /* main.m */; };
 		BF3216C51ECED57C0035C430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C41ECED57C0035C430 /* AppDelegate.m */; };
 		BF3216C81ECED57C0035C430 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216C71ECED57C0035C430 /* TopViewController.m */; };
@@ -23,12 +24,15 @@
 		BF3216F71ECEDB940035C430 /* Tanka.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216F61ECEDB940035C430 /* Tanka.m */; };
 		BF3216FB1ECEDD880035C430 /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216FA1ECEDD880035C430 /* Answers.m */; };
 		BF3216FD1ECEDE5A0035C430 /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3216FC1ECEDE5A0035C430 /* Questions.m */; };
+		BF5D093D1FC52F6D00C9E934 /* simpleKaruta_upgrade_2.sql in Resources */ = {isa = PBXBuildFile; fileRef = BF5D093C1FC52F6D00C9E934 /* simpleKaruta_upgrade_2.sql */; };
 		BF72F5731F6A7CD700030F87 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72F5721F6A7CD700030F87 /* CardView.m */; };
 		BF76953B1FBEA5B6002D414B /* circleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7695381FBEA5B6002D414B /* circleIcon.png */; };
 		BF76953C1FBEA5B6002D414B /* pauseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7695391FBEA5B6002D414B /* pauseIcon.png */; };
 		BF76953D1FBEA5B6002D414B /* wrongIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF76953A1FBEA5B6002D414B /* wrongIcon.png */; };
 		BF7695401FBED6F0002D414B /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76953F1FBED6F0002D414B /* ResultViewController.m */; };
+		BFC756631FC40780002C273D /* BaseDBLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC756621FC40780002C273D /* BaseDBLogic.m */; };
 		BFD9CCC81F5E9CDE007E9578 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD9CCC71F5E9CDE007E9578 /* TTTAttributedLabel.m */; };
+		BFE0BB851FC50E8800F58C61 /* ResultsLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE0BB841FC50E8800F58C61 /* ResultsLogic.m */; };
 		BFE5EF441ECEDFB900BFBC28 /* PlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +65,8 @@
 		BA7B20748E860737B763CADF /* Pods-simpleKaruta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleKaruta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simpleKaruta/Pods-simpleKaruta.debug.xcconfig"; sourceTree = "<group>"; };
 		BF07921E1FC2954D007A3F73 /* PauseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseViewController.h; sourceTree = "<group>"; };
 		BF07921F1FC2954D007A3F73 /* PauseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseViewController.m; sourceTree = "<group>"; };
+		BF198A871FC40D57000417EF /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		BF198A881FC40D57000417EF /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		BF3216BD1ECED57C0035C430 /* simpleKaruta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleKaruta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3216C11ECED57C0035C430 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BF3216C31ECED57C0035C430 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -82,6 +88,7 @@
 		BF3216FA1ECEDD880035C430 /* Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answers.m; sourceTree = "<group>"; };
 		BF3216FC1ECEDE5A0035C430 /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
 		BF3216FE1ECEDE6B0035C430 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
+		BF5D093C1FC52F6D00C9E934 /* simpleKaruta_upgrade_2.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simpleKaruta_upgrade_2.sql; sourceTree = "<group>"; };
 		BF72F5721F6A7CD700030F87 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		BF72F5751F6A7D3800030F87 /* CardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		BF72F5771F6A7DBD00030F87 /* Tanka.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tanka.h; sourceTree = "<group>"; };
@@ -91,8 +98,12 @@
 		BF76953A1FBEA5B6002D414B /* wrongIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrongIcon.png; sourceTree = "<group>"; };
 		BF76953E1FBED6F0002D414B /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		BF76953F1FBED6F0002D414B /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		BFC756611FC40780002C273D /* BaseDBLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBLogic.h; sourceTree = "<group>"; };
+		BFC756621FC40780002C273D /* BaseDBLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDBLogic.m; sourceTree = "<group>"; };
 		BFD9CCC61F5E9CDE007E9578 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		BFD9CCC71F5E9CDE007E9578 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		BFE0BB831FC50E8800F58C61 /* ResultsLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsLogic.h; sourceTree = "<group>"; };
+		BFE0BB841FC50E8800F58C61 /* ResultsLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsLogic.m; sourceTree = "<group>"; };
 		BFE5EF431ECEDFB900BFBC28 /* PlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingViewController.m; sourceTree = "<group>"; };
 		C06F94A6501ECFE8B091F8C6 /* Pods-simpleKaruta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleKaruta.release.xcconfig"; path = "Pods/Target Support Files/Pods-simpleKaruta/Pods-simpleKaruta.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +184,7 @@
 		BF3216BF1ECED57C0035C430 /* simpleKaruta */ = {
 			isa = PBXGroup;
 			children = (
+				BFC756601FC40768002C273D /* database */,
 				0A7D877A1ED044E600343689 /* model */,
 				BF3216C31ECED57C0035C430 /* AppDelegate.h */,
 				BF3216C41ECED57C0035C430 /* AppDelegate.m */,
@@ -191,6 +203,7 @@
 				BF3216CE1ECED57C0035C430 /* LaunchScreen.storyboard */,
 				BF3216D11ECED57C0035C430 /* Info.plist */,
 				0A7D877B1ED0489E00343689 /* allTankaData.json */,
+				BF5D093C1FC52F6D00C9E934 /* simpleKaruta_upgrade_2.sql */,
 				BF7695381FBEA5B6002D414B /* circleIcon.png */,
 				BF7695391FBEA5B6002D414B /* pauseIcon.png */,
 				BF76953A1FBEA5B6002D414B /* wrongIcon.png */,
@@ -224,6 +237,19 @@
 				BF3216E71ECED57C0035C430 /* Info.plist */,
 			);
 			path = simpleKarutaUITests;
+			sourceTree = "<group>";
+		};
+		BFC756601FC40768002C273D /* database */ = {
+			isa = PBXGroup;
+			children = (
+				BF198A871FC40D57000417EF /* DBManager.h */,
+				BF198A881FC40D57000417EF /* DBManager.m */,
+				BFC756611FC40780002C273D /* BaseDBLogic.h */,
+				BFC756621FC40780002C273D /* BaseDBLogic.m */,
+				BFE0BB831FC50E8800F58C61 /* ResultsLogic.h */,
+				BFE0BB841FC50E8800F58C61 /* ResultsLogic.m */,
+			);
+			name = database;
 			sourceTree = "<group>";
 		};
 		BFD9CCC51F5E9CDE007E9578 /* TTTAttributedLabel */ = {
@@ -365,6 +391,7 @@
 			files = (
 				BF3216D01ECED57C0035C430 /* LaunchScreen.storyboard in Resources */,
 				BF76953D1FBEA5B6002D414B /* wrongIcon.png in Resources */,
+				BF5D093D1FC52F6D00C9E934 /* simpleKaruta_upgrade_2.sql in Resources */,
 				BF76953B1FBEA5B6002D414B /* circleIcon.png in Resources */,
 				BF3216CD1ECED57C0035C430 /* Assets.xcassets in Resources */,
 				BF3216CB1ECED57C0035C430 /* Main.storyboard in Resources */,
@@ -541,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE0BB851FC50E8800F58C61 /* ResultsLogic.m in Sources */,
 				BFE5EF441ECEDFB900BFBC28 /* PlayingViewController.m in Sources */,
 				BF3216F71ECEDB940035C430 /* Tanka.m in Sources */,
 				BF3216C81ECED57C0035C430 /* TopViewController.m in Sources */,
@@ -548,10 +576,12 @@
 				BF72F5731F6A7CD700030F87 /* CardView.m in Sources */,
 				BFD9CCC81F5E9CDE007E9578 /* TTTAttributedLabel.m in Sources */,
 				BF3216FB1ECEDD880035C430 /* Answers.m in Sources */,
+				BF198A891FC40D57000417EF /* DBManager.m in Sources */,
 				BF3216C51ECED57C0035C430 /* AppDelegate.m in Sources */,
 				BF3216FD1ECEDE5A0035C430 /* Questions.m in Sources */,
 				BF0792201FC2954D007A3F73 /* PauseViewController.m in Sources */,
 				BF3216C21ECED57C0035C430 /* main.m in Sources */,
+				BFC756631FC40780002C273D /* BaseDBLogic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 //
 
 #import "ResultViewController.h"
+#import "ResultsLogic.h"
 
 @interface ResultViewController ()
 
@@ -23,6 +24,16 @@
     CGFloat percent = (float)self.correctCount/(float)self.questionCount * 100;
     CGFloat numRound = roundf(percent*10)/10;
     self.percentLabel.text = [NSString stringWithFormat:@"%.1f%%正解！", numRound];
+    
+    // 結果をDBに格納
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setLocale:[NSLocale systemLocale]];
+    [formatter setTimeZone:[NSTimeZone systemTimeZone]];
+    [formatter setDateFormat:@"yyyy年MM月dd日 HH時mm分"];
+    NSString *strDate = [formatter stringFromDate:[NSDate date]];
+    
+    [[[ResultsLogic alloc] init] insertResultsWithDate:strDate questionCount:self.questionCount correctCount:self.correctCount];
+
 }
 
 
