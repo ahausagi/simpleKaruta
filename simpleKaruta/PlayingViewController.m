@@ -7,7 +7,6 @@
 //
 
 #import "PlayingViewController.h"
-#import "ResultViewController.h"
 #import "TTTAttributedLabel.h"
 
 @interface PlayingViewController()
@@ -101,14 +100,14 @@
 
 
 // 結果画面を表示する
-- (void)transitionToResultVC {
+- (void)transitionToResultPopup {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    ResultViewController *resultVC = [storyboard instantiateViewControllerWithIdentifier:@"ResultViewController"];
-    resultVC.delegate = self;
-    resultVC.modalPresentationStyle = UIModalTransitionStyleCrossDissolve;
-    resultVC.correctCount = self.correctCount;
-    resultVC.questionCount = self.totalNumberQuestions;
-    [self presentViewController:resultVC animated:YES completion:nil];
+    ResultPopupViewController *resultPopup = [storyboard instantiateViewControllerWithIdentifier:@"ResultPopupViewController"];
+    resultPopup.delegate = self;
+    resultPopup.modalPresentationStyle = UIModalTransitionStyleCrossDissolve;
+    resultPopup.correctCount = self.correctCount;
+    resultPopup.questionCount = self.totalNumberQuestions;
+    [self presentViewController:resultPopup animated:YES completion:nil];
 }
 
 #pragma mark - CardViewDelegate メソッド
@@ -164,7 +163,7 @@
         // 誤タップ防止
         self.view.userInteractionEnabled = NO;
         // 結果表示
-        [self transitionToResultVC];
+        [self transitionToResultPopup];
     }
 }
 
@@ -196,11 +195,11 @@
         // 誤タップ防止
         self.view.userInteractionEnabled = NO;
         // 結果表示
-        [self transitionToResultVC];
+        [self transitionToResultPopup];
     }
 }
 
-#pragma mark - ResultVCDelegate メソッド
+#pragma mark - ResultPopupDelegate メソッド
 - (void)backTopViewFromResult {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

@@ -9,10 +9,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CardView.h"
-#import "ResultViewController.h"
+#import "ResultPopupViewController.h"
 #import "PauseViewController.h"
 
-@interface PlayingViewController : UIViewController <CardViewDelegate, ResultVCDelegate, PauseVCDelegate>
+@interface PlayingViewController : UIViewController <CardViewDelegate, ResultPopupDelegate, PauseVCDelegate>
 
 // 遷移前画面から受け取る情報
 @property (nonatomic) NSMutableArray *questionArray;

@@ -1,20 +1,20 @@
 //
-//  ResultViewController.m
+//  ResultPopupViewController.m
 //  simpleKaruta
-//  成績画面
+//  成績ポップアップ
 
 //  Created by ahausagi on 2017/11/17.
 //  Copyright © 2017年 ahausagi. All rights reserved.
 //
 
-#import "ResultViewController.h"
+#import "ResultPopupViewController.h"
 #import "ResultsLogic.h"
 
-@interface ResultViewController ()
+@interface ResultPopupViewController ()
 
 @end
 
-@implementation ResultViewController
+@implementation ResultPopupViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

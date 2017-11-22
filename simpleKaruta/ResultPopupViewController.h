@@ -1,20 +1,20 @@
 //
-//  ResultViewController.h
+//  ResultPopupViewController.h
 //  simpleKaruta
-//  成績画面
+//  成績ポップアップ
 
 //  Created by ahausagi on 2017/11/17.
 //  Copyright © 2017年 ahausagi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-@protocol ResultVCDelegate <NSObject>
+@protocol ResultPopupDelegate <NSObject>
 - (void)backTopViewFromResult;
 @end
 
-@interface ResultViewController : UIViewController
+@interface ResultPopupViewController : UIViewController
 
-@property(nonatomic, assign) id <ResultVCDelegate> delegate;
+@property(nonatomic, assign) id <ResultPopupDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet UILabel *percentLabel;
 @property (nonatomic) NSInteger correctCount;
