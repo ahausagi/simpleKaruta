@@ -29,11 +29,12 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setLocale:[NSLocale systemLocale]];
     [formatter setTimeZone:[NSTimeZone systemTimeZone]];
-    [formatter setDateFormat:@"yyyy年MM月dd日 HH時mm分"];
+    [formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
     NSString *strDate = [formatter stringFromDate:[NSDate date]];
-    
-    [[[ResultsLogic alloc] init] insertResultsWithDate:strDate questionCount:self.questionCount correctCount:self.correctCount];
-
+    [[[ResultsLogic alloc] init] insertResultsWithDate:strDate
+                                         questionCount:self.questionCount
+                                          correctCount:self.correctCount
+                                            percentage:percent];
 }
 
 

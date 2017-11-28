@@ -228,7 +228,7 @@ NSString *const DB_UPGRADE_BASE_FILE_NAME = @"simpleKaruta_upgrade_";
 - (BOOL)createResultsTable:(FMDatabase *)db {
     
     BOOL isSucceedCreate = YES;
-    NSString *createResults = @"CREATE TABLE `Results` (`date` TEXT, `questionCount` INTEGER, `correctCount` INTEGER);";
+    NSString *createResults = @"CREATE TABLE `Results` (`date` TEXT, `questionCount` INTEGER, `correctCount` INTEGER, `percentage` REAL);";
     
     @try {
         [db open];
